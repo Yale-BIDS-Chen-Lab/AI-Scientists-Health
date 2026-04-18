@@ -1,71 +1,62 @@
 # AI-Scientists-Health
 
-A curated awesome-style survey of AI for health, including papers, code repositories, datasets, benchmarks, and tools.
+A curated list of AI-for-health research, including representative papers and related resources across key medical AI directions.
 
-## How to use this repository
-- Browse topics below to find key resources.
-- Use the entry format to keep submissions consistent.
-- Open a PR to add new items.
+This repository is organized as an awesome-style collection and uses a consistent table format for paper entries.
 
-## Suggested structure
+## Table of Contents
+
 - [Foundation Models](#foundation-models)
 - [Clinical Decision Support](#clinical-decision-support)
 - [Medical Imaging](#medical-imaging)
 - [EHR and Multimodal Learning](#ehr-and-multimodal-learning)
 - [Benchmarks and Datasets](#benchmarks-and-datasets)
+- [Contributing](#contributing)
+- [Citation](#citation)
 
-## Entry templates
+## Foundation Models
 
-### Paper entry
-```md
-- **Paper**: [Title](paper_link) (Venue, Year) — short one-line summary.
-  - **Code**: [GitHub](repo_link) (optional)
-  - **Project**: [Website](project_link) (optional)
-  - **Citation**: `Author et al., Venue Year` or BibTeX link/snippet (optional)
-  - **Tags**: `#imaging #ehr #llm` (optional)
-```
+| Title | Year | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| ExampleMed-LLM | 2025 | [Link](https://example.org/paper) | [GitHub](https://github.com/example/med-llm) | Medical reasoning with multimodal records |
 
-### Repository/tool entry
-```md
-- **Repo**: [Name](repo_link) — short one-line description.
-  - **Paper**: [Associated Paper](paper_link) (optional)
-  - **License**: `MIT/Apache-2.0/...` (optional)
-  - **Citation**: `How to cite` (optional)
-```
+## Clinical Decision Support
 
-### Dataset/benchmark entry
-```md
-- **Dataset**: [Name](dataset_link) — what it contains + task.
-  - **Paper**: [Primary Paper](paper_link) (optional)
-  - **Access**: public/restricted + link (optional)
-  - **Citation**: `Dataset citation` (optional)
-```
+| Title | Year | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| _Add paper title_ | YYYY | [Link](https://example.org) | [Code](https://github.com/example/repo) | One-line summary |
 
-## Example section
-### Foundation Models
-- **Paper**: [ExampleMed-LLM](https://example.org/paper) (NeurIPS, 2025) — medical reasoning with multimodal records.
-  - **Code**: [GitHub](https://github.com/example/med-llm)
-  - **Citation**: `Doe et al., NeurIPS 2025`
-  - **Tags**: `#llm #multimodal #clinical`
+## Medical Imaging
 
-## How to add a new item
-1. Fork and create a branch.
-2. Add your entry in the most relevant section using the template above.
-3. Keep descriptions brief and neutral.
-4. Open a pull request with:
-   - item type (paper/repo/dataset),
-   - topic section,
-   - source links,
-   - citation info (if available).
+| Title | Year | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| _Add paper title_ | YYYY | [Link](https://example.org) | [Code](https://github.com/example/repo) | One-line summary |
 
-## Contribution rules (short)
-- Prefer peer-reviewed or widely used resources.
-- Avoid duplicate entries.
-- Use stable links (DOI/arXiv/GitHub release/project page).
-- Keep alphabetical or year-based ordering within each section.
+## EHR and Multimodal Learning
 
-## Citation for this awesome list
-If you use this repository in your work, please cite it as:
+| Title | Year | Paper | Code | Notes |
+| --- | --- | --- | --- | --- |
+| _Add paper title_ | YYYY | [Link](https://example.org) | [Code](https://github.com/example/repo) | One-line summary |
+
+## Benchmarks and Datasets
+
+| Name | Year | Resource | Paper | Notes |
+| --- | --- | --- | --- | --- |
+| _Add benchmark or dataset_ | YYYY | [Link](https://example.org) | [Link](https://example.org) | Task/data summary |
+
+## Contributing
+
+Contributions are welcome. Please open a PR and:
+
+1. Add entries in the most relevant section.
+2. Keep descriptions brief and neutral.
+3. Use stable links (conference page, DOI, arXiv, or official repository).
+4. Avoid duplicates and keep ordering consistent within each section.
+
+## Citation
+
+If you use this repository in your work, please cite:
+
 ```bibtex
 @misc{ai_scientists_health_awesome,
   title  = {AI-Scientists-Health: An Awesome-Style Survey for AI in Health},
