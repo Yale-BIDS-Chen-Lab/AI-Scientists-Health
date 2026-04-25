@@ -4,6 +4,8 @@ AI Scientists are autonomous systems designed to conduct research end-to-end, in
 
 This repository curates the representative work cited in the perspective paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward* (2026). Sections mirror the paper's structure, surveying the emerging landscape (Section 2), enumerating health-specific opportunities (Section 3), and addressing the six interlocking challenges of the **Workflow-driven, Evidence-grounded, Cross-modal, Accountable, Reproducible, and Embodied (WE CARE)** roadmap (Sections 4–5). 
 
+**Note: I haven't validate the paper, code, and resource links.** 
+
 ## Table of Contents
 - [Representative AI Scientist Systems](#representative-ai-scientist-systems)
 - [Health-Specific Opportunities and Translational Applications](#health-specific-opportunities-and-translational-applications)
