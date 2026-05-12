@@ -35,32 +35,24 @@ Within each cell, entries are sorted chronologically (oldest first).
 ## Biomedical
 
 ### Biomedical LLMs
-Domain-pretrained or fine-tuned language models, including text, protein, nucleic acid, single-cell, and multimodal foundation models with language as a primary modality.
+Text-based biomedical language models and multimodal LMs in which natural language is a primary modality (e.g., text-and-molecule, text-and-DNA, text-and-protein hybrids). Pure biological-sequence foundation models (e.g., ESM, Geneformer, scGPT, scFoundation, DNABERT-2, ProtTrans, ProGen, ESM3) are excluded; the perspective paper references them as tools used by AI Scientists rather than as LLMs in the language-model lineage that becomes Agents and AI Scientists.
 
 | Title | Year | Paper | Resource | Notes |
 | --- | --- | --- | --- | --- |
 | SciBERT | 2019 | [EMNLP](https://aclanthology.org/D19-1371/) | [GitHub](https://github.com/allenai/scibert) | BERT pretrained on 1.14M scientific papers; canonical scientific-text encoder |
 | BioBERT | 2020 | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btz682) | [GitHub](https://github.com/dmis-lab/biobert) | First widely adopted BERT pretrained on PubMed; baseline for biomedical NER, RE, QA |
-| ProtTrans (ProtBERT, ProtT5) | 2021 | [IEEE TPAMI](https://doi.org/10.1109/TPAMI.2021.3095381) | [GitHub](https://github.com/agemagician/ProtTrans) | Family of protein language models trained on UniRef and BFD |
 | PubMedBERT | 2021 | [ACM Trans. Comput. Healthc.](https://doi.org/10.1145/3458754) | [HF](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) | From-scratch PubMed pretraining; introduced the BLURB benchmark |
 | BioGPT | 2022 | [Briefings in Bioinformatics](https://doi.org/10.1093/bib/bbac409) | [GitHub](https://github.com/microsoft/BioGPT) | First widely used generative biomedical LLM; SOTA on PubMedQA at release |
 | Galactica | 2022 | [arXiv](https://arxiv.org/abs/2211.09085) | [Project page](https://galactica.org/) | 120B-parameter LLM trained on curated scientific corpus with SMILES, AA, and LaTeX tokens |
-| ESM-2 / ESMFold | 2023 | [Science](https://doi.org/10.1126/science.ade2574) | [GitHub](https://github.com/facebookresearch/esm) | 15B-param protein LM; enabled the ESM Metagenomic Atlas |
-| ProGen | 2023 | [Nature Biotechnology](https://doi.org/10.1038/s41587-022-01618-2) | — | Generated wet-lab-validated artificial lysozymes; first controllable protein generation by an LM |
-| Geneformer | 2023 | [Nature](https://doi.org/10.1038/s41586-023-06139-9) | [HF](https://huggingface.co/ctheodoris/Geneformer) | Pretrained on 30M single-cell transcriptomes; identified validated cardiomyopathy targets |
 | BioMedGPT | 2023 | [arXiv](https://arxiv.org/abs/2308.09442) | [GitHub](https://github.com/PharMolix/OpenBioMed) | Open 10B-param multimodal biomedical LLM unifying molecule, protein, and natural language |
-| DNABERT-2 | 2023 | [arXiv](https://arxiv.org/abs/2306.15006) | [GitHub](https://github.com/MAGICS-LAB/DNABERT_2) | BPE-tokenized genomic LM matching SOTA with 21x fewer parameters; introduced the GUE benchmark |
-| InstructProtein | 2023 | [arXiv](https://arxiv.org/abs/2310.03269) | — | Bidirectional protein-language instruction tuning over UniProt knowledge graph |
 | BioMedLM | 2024 | [arXiv](https://arxiv.org/abs/2403.18421) | [HF](https://huggingface.co/stanford-crfm/BioMedLM) | Compact 2.7B GPT trained from scratch on PubMed; runs on a single A100 |
-| scGPT | 2024 | [Nature Methods](https://doi.org/10.1038/s41592-024-02201-0) | [GitHub](https://github.com/bowang-lab/scGPT) | Generative transformer pretrained on 33M cells; SOTA on cell-type annotation and perturbation |
-| scFoundation | 2024 | [Nature Methods](https://doi.org/10.1038/s41592-024-02305-7) | [GitHub](https://github.com/biomap-research/scFoundation) | 100M-param model on 50M cells; SOTA on drug response and perturbation tasks |
 | BioMistral | 2024 | [ACL Findings](https://aclanthology.org/2024.findings-acl.348/) | [GitHub](https://github.com/BioMistral/BioMistral) | Mistral-7B continually pretrained on PubMed Central; multilingual biomedical evaluation |
-| ChatNT | 2024 | [bioRxiv](https://doi.org/10.1101/2024.04.30.591835) | [GitHub](https://github.com/instadeepai/ChatNT) | Conversational nucleic-acid foundation model handling 27 genomics tasks via natural-language prompts |
-| ESM3 | 2024 | [bioRxiv](https://doi.org/10.1101/2024.07.01.600583) | [GitHub](https://github.com/evolutionaryscale/esm) | 98B-param multimodal protein LM over sequence, structure, and function tokens |
-| DrugGen | 2024 | [arXiv](https://arxiv.org/abs/2411.14157) | — | RL-tuned LLM for target-conditioned molecule generation with ADMET-aware decoding |
+| ChatNT | 2024 | [bioRxiv](https://doi.org/10.1101/2024.04.30.591835) | [GitHub](https://github.com/instadeepai/ChatNT) | Conversational nucleic-acid foundation model controlled by natural-language prompts across 27 genomics tasks |
+| DrugGen | 2024 | [arXiv](https://arxiv.org/abs/2411.14157) | — | RL-tuned LLM for target-conditioned molecule (SMILES) generation with ADMET-aware decoding |
 | BindGPT | 2025 | [AAAI](https://arxiv.org/abs/2406.03686) | — | Pocket-conditioned 3D ligand generation by a GPT-style LM with RL fine-tuning |
 | TxGemma | 2025 | [arXiv](https://arxiv.org/abs/2504.06196) | [HF](https://huggingface.co/google/txgemma-9b-chat) | Gemma-based open models specialized for therapeutic-discovery tasks |
-| BioReason | 2025 | [arXiv](https://arxiv.org/abs/2505.23579) | — | Reinforcement-learning reasoning training over a DNA + text LM |
+| BioReason | 2025 | [arXiv](https://arxiv.org/abs/2505.23579) | [GitHub](https://github.com/bowang-lab/BioReason) | DNA-LLM with RL-based reasoning training; +15% on variant effect, 98% on KEGG disease pathway prediction |
+| BioReason-Pro | 2026 | [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1) | [GitHub](https://github.com/bowang-lab/BioReason-Pro) | First multimodal reasoning LLM for protein function (Qwen3-4B + ESM3 + GO graph); human experts prefer its annotations over UniProt ground truth in 79% of cases |
 
 ### Biomedical AI Agents
 Multi-step systems with tool use, planning, and bounded task scope. Systems that approach AI Scientist criteria but lack a self-evolving mechanism are listed here.
