@@ -1,16 +1,28 @@
 # AI-Scientists-Health
 
-AI Scientists are autonomous systems designed to conduct research end-to-end, including generating hypotheses, designing and executing evaluations, interpreting results, and iteratively refining research directions. As a paradigm that extends beyond large language models and conventional AI agents, they hold transformative potential for health, where heterogeneous multimodal data, stringent evidence requirements, and demanding governance expectations make this both the most consequential and the most underserved frontier for the emerging paradigm.
+This repository is centered on **AI Scientists in health** and is intended to serve as a public, regularly updated companion resource to the paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward* (2026).
 
-This repository curates representative work cited in or relevant to **Section 2 (The Emerging Landscape of AI Scientists)** of the perspective paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward* (2026). Entries are organized along two axes: the three paradigms (LLMs, AI Agents, AI Scientists) and three health subdomains (Biomedical, Clinical, Public Health).
+AI Scientists are systems that pursue scientific questions through multi-stage, sustained, and adaptive inquiry, including generating hypotheses, designing and executing evaluations, interpreting results, and iteratively refining research directions. In health, this emerging paradigm is especially consequential because heterogeneous multimodal data, stringent evidence requirements, and demanding governance expectations make the path from capability to trustworthy deployment particularly challenging.
 
-**Categorization rules.** Each entry is placed in exactly one cell based on strict criteria:
+To situate AI Scientists within their broader technical lineage, this repository also includes **selected** large language models (LLMs) and AI Agents. These entries are included only to document the paradigm transition, clarify boundary cases, and provide subdomain-specific context. This repository is therefore **not** intended to be an exhaustive catalog of all health-related LLMs or AI agents. Instead, it is designed to support transparent and evolving curation of systems most relevant to interpreting AI Scientists in health as an emerging paradigm.
+
+Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
+
+## Categorization rules
+
+Each entry is placed in exactly one cell based on the following criteria:
+
 - **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). Evaluation studies of LLMs, perspectives, and benchmarks are excluded.
-- **AI Agent**: a system that does multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks. Benchmarks that evaluate agents are excluded; only the agent systems themselves are listed.
-- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper, namely (1) multi-stage with varying autonomy, (2) sustained and persistent, (3) self-evolving, and (4) knowledge-accessing and tool-using. Reviews, perspectives, simulators, and partial pipelines that miss any of these properties are excluded or reclassified.
-- **Subdomain**: an entry must have a demonstrated application or evaluation in the corresponding subdomain. Paradigm-defining general-purpose AI Scientist systems from ML or algorithmic domains (e.g., The AI Scientist, AlphaEvolve, DeepScientist, EvoScientist, AI-Researcher, Agent Laboratory) are foundational to Section 2 but are not listed here because they do not meet the subdomain requirement; readers should consult Table 1 of the perspective paper for the broader landscape.
+- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks. Benchmarks that evaluate agents are excluded; only the agent systems themselves are listed.
+- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper:  
+  (1) multi-stage with varying autonomy,  
+  (2) sustained and persistent,  
+  (3) self-evolving, and  
+  (4) knowledge-accessing and tool-using.  
+  Reviews, perspectives, simulators, and partial pipelines that do not satisfy all four properties are excluded or reclassified.
+- **Subdomain**: an entry must have a demonstrated application or evaluation in the corresponding subdomain.
 
-**Note:** paper, code, and resource links have not been individually validated.
+Paradigm-defining general-purpose AI Scientist systems from machine learning or algorithmic domains (for example, *The AI Scientist*, *AlphaEvolve*, *DeepScientist*, *EvoScientist*, *AI-Researcher*, and *Agent Laboratory*) are foundational for understanding the broader landscape, but are not listed here because they do not satisfy the subdomain requirement. Readers should consult Table 1 of the paper for the broader cross-domain view.
 
 ## Table of Contents
 - [Biomedical](#biomedical) (preclinical discovery: drug discovery, omics, protein and molecule modeling, biomedical literature)
@@ -39,9 +51,6 @@ Text-based biomedical language models and multimodal LMs in which natural langua
 
 | Title | Year | Paper | Resource | Notes |
 | --- | --- | --- | --- | --- |
-| SciBERT | 2019 | [EMNLP](https://aclanthology.org/D19-1371/) | [GitHub](https://github.com/allenai/scibert) | BERT pretrained on 1.14M scientific papers; canonical scientific-text encoder |
-| BioBERT | 2020 | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btz682) | [GitHub](https://github.com/dmis-lab/biobert) | First widely adopted BERT pretrained on PubMed; baseline for biomedical NER, RE, QA |
-| PubMedBERT | 2021 | [ACM Trans. Comput. Healthc.](https://doi.org/10.1145/3458754) | [HF](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) | From-scratch PubMed pretraining; introduced the BLURB benchmark |
 | BioGPT | 2022 | [Briefings in Bioinformatics](https://doi.org/10.1093/bib/bbac409) | [GitHub](https://github.com/microsoft/BioGPT) | First widely used generative biomedical LLM; SOTA on PubMedQA at release |
 | Galactica | 2022 | [arXiv](https://arxiv.org/abs/2211.09085) | [Project page](https://galactica.org/) | 120B-parameter LLM trained on curated scientific corpus with SMILES, AA, and LaTeX tokens |
 | BioMedGPT | 2023 | [arXiv](https://arxiv.org/abs/2308.09442) | [GitHub](https://github.com/PharMolix/OpenBioMed) | Open 10B-param multimodal biomedical LLM unifying molecule, protein, and natural language |
@@ -114,10 +123,6 @@ Clinical and medical language models targeting clinical NLP, EHR, diagnostic rea
 
 | Title | Year | Paper | Resource | Notes |
 | --- | --- | --- | --- | --- |
-| ClinicalBERT (Alsentzer) | 2019 | [ClinicalNLP / arXiv](https://arxiv.org/abs/1904.03323) | [GitHub](https://github.com/EmilyAlsentzer/clinicalBERT) | First publicly released BERT pretrained on MIMIC-III notes |
-| ClinicalBERT (Huang) | 2019 | [arXiv](https://arxiv.org/abs/1904.05342) | [GitHub](https://github.com/kexinhuang12345/clinicalBERT) | Parallel ClinicalBERT focused on 30-day readmission prediction |
-| GatorTron | 2022 | [npj Digital Medicine](https://doi.org/10.1038/s41746-022-00742-2) | [HF](https://huggingface.co/UFNLP/gatortron-base) | 8.9B-param clinical LM trained on 90B words of UF Health notes |
-| Clinical-Longformer | 2023 | [arXiv](https://arxiv.org/abs/2301.11847) | [GitHub](https://github.com/luoyuanlab/Clinical-Longformer) | Long-context (4096-token) clinical encoder for note-level reasoning |
 | ChatDoctor | 2023 | [arXiv](https://arxiv.org/abs/2303.14070) | [GitHub](https://github.com/Kent0n-Li/ChatDoctor) | Early LLaMA-based patient-doctor chatbot trained on HealthCareMagic-100k |
 | MedAlpaca | 2023 | [arXiv](https://arxiv.org/abs/2304.08247) | [GitHub](https://github.com/kbressem/medAlpaca) | Open instruction-tuned medical LLaMA; widely used baseline |
 | HuatuoGPT | 2023 | [Findings of EMNLP](https://aclanthology.org/2023.findings-emnlp.725/) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT) | Major Chinese-language clinical chat LLM combining distilled and real doctor data |
@@ -201,9 +206,6 @@ Language models applied to population-level health: epidemiology, surveillance, 
 
 | Title | Year | Paper | Resource | Notes |
 | --- | --- | --- | --- | --- |
-| CT-BERT | 2020 | [arXiv](https://arxiv.org/abs/2005.07503) ([Front. AI](https://doi.org/10.3389/frai.2023.1023281)) | [GitHub](https://github.com/digitalepidemiologylab/covid-twitter-bert) | COVID-domain Twitter LM trained on 160M tweets; reused for vaccine sentiment and infodemiology |
-| MentalBERT | 2022 | [LREC](https://arxiv.org/abs/2110.15621) | [HF](https://huggingface.co/mental/mental-bert-base-uncased) | Domain-pretrained LM on Reddit mental-health text; backbone for depression and suicidal-ideation surveillance |
-| PHS-BERT | 2022 | [NLPPower @ ACL](https://aclanthology.org/2022.nlppower-1.3/) | [HF](https://huggingface.co/publichealthsurveillance/PHS-BERT) | Public-health-domain BERT benchmarked across 25 public-health surveillance tasks |
 | PandemicLLM | 2024 | [Nature Computational Science](https://doi.org/10.1038/s43588-025-00798-6) ([arXiv](https://arxiv.org/abs/2404.06962)) | — | Multimodal LLM reformulating outbreak forecasting as text reasoning over policy, genomics, and spatial signals |
 | SDoH-GPT | 2024 | [arXiv](https://arxiv.org/abs/2407.17126) | — | LLM pipeline extracting social determinants of health at population scale |
 | EpiLLM | 2025 | [arXiv](https://arxiv.org/abs/2505.12738) | — | Dual-branch LLM aligning case counts and human-mobility tokens for spatio-temporal forecasting |
@@ -248,13 +250,4 @@ Contributions are welcome. Please open a PR and:
 4. Avoid duplicates and maintain chronological ordering within each cell.
 5. Do not add reviews, perspective articles, benchmarks, evaluation studies, or simulators; only the LLM, AI Agent, or AI Scientist system itself.
 
-## Citation
-If you use this repository in your work, please cite:
-```bibtex
-@misc{ai_scientists_health_awesome,
-  title  = {AI-Scientists-Health: An Awesome-Style Survey of LLMs, AI Agents, and AI Scientists across Biomedical, Clinical, and Public Health},
-  author = {Contributors},
-  year   = {2026},
-  url    = {https://github.com/Yale-BIDS-Chen-Lab/AI-Scientists-Health}
-}
 ```
