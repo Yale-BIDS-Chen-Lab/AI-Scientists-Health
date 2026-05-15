@@ -38,7 +38,6 @@ Paradigm-defining general-purpose AI Scientist systems from machine learning or 
   - [Public Health AI Agents](#public-health-ai-agents)
   - [Public Health AI Scientists](#public-health-ai-scientists)
 - [Contributing](#contributing)
-- [Citation](#citation)
 
 Within each cell, entries are sorted chronologically (oldest first).
 
