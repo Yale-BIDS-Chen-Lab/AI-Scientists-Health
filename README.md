@@ -8,9 +8,9 @@ To situate AI Scientists within their technical lineage, the repository also inc
 
 These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
 
-- **LLM**: a *generative* language model (text, or multimodal with language as a primary modality) capable of open-ended text generation and reasoning. Encoder-only or masked-language models such as BERT (and biomedical variants like BioBERT or PubMedBERT) are excluded, as they are representation models rather than the generative lineage that becomes Agents and AI Scientists.
-- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks.
-- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper: (i) multi-stage with varying autonomy, (ii) sustained and persistent, (iii) self-evolving, and (iv) knowledge-accessing and tool-using. 
+- **LLM**: A generative model pretrained on large text corpora and adapted through fine-tuning, providing broad language and reasoning capability.
+- **AI Agent**: A system that extends an LLM with memory, tool use, planning, and action modules to interact with external environments over multiple steps, typically oriented toward bounded task completion, such as solving a defined problem or executing a specified workflow.
+- **AI Scientist**: A system that pursues scientific questions by generating, evaluating, and refining evidence across extended research cycles. Where agents complete tasks, AI Scientists conduct science: formulating questions, designing analyses or experiments, interpreting intermediate findings, and updating research directions based on what they learn.
 
 The table summarizes how the three paradigms differ across these properties:
 
