@@ -8,6 +8,22 @@ To situate AI Scientists within their broader technical lineage, this repository
 
 Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
 
+## The three paradigms: LLMs, AI Agents, and AI Scientists
+
+The three paradigms form a technical lineage in which each stage builds on the one before it. **LLMs** provide the broad reasoning substrate; **AI Agents** extend an LLM with memory, tool use, and planning to complete bounded, multi-step tasks; and **AI Scientists** extend agents further, moving from task completion to sustained scientific inquiry across an entire research trajectory.
+
+| Dimension | LLM | AI Agent | AI Scientist |
+| --- | --- | --- | --- |
+| Unit of operation | Single response | Bounded task | Research trajectory |
+| Interaction | One-shot generation | Multi-step, with tools | Multi-stage inquiry cycle |
+| Time horizon | Within a prompt | Short, predefined | Long-horizon (days to months) |
+| Objective | Generate text | Complete a task | Conduct science: hypothesize, test, refine |
+| Memory | Context window | Within-task | Persistent across sessions |
+| Self-evolution | No | No | Yes |
+| Judged by | Response quality | Task completion | Novelty, rigor, reproducibility |
+
+The table captures the conceptual contrast. The precise inclusion and exclusion criteria that determine an entry's cell are defined next.
+
 ## Categorization rules
 
 Each entry is placed in exactly one cell based on the following criteria:
