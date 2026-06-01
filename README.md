@@ -55,6 +55,8 @@ The table summarizes how the three paradigms differ across these properties:
 
 ## Biomedical
 
+Preclinical and basic biomedical discovery, upstream of patient care: drug discovery, omics, protein and molecule modeling, and biomedical literature. Systems here operate on molecular, cellular, and laboratory data.
+
 ### Biomedical LLMs
 Biomedical language models, including text-based models and multimodal models in which natural language is a primary modality (e.g., text-and-molecule, text-and-DNA, and text-and-protein hybrids).
 
@@ -128,6 +130,8 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 ---
 
 ## Clinical
+
+Clinical research and healthcare delivery at the level of the individual patient: diagnosis, treatment, EHR analysis, clinical trials, and medical imaging.
 
 ### Clinical LLMs
 Clinical and medical language models targeting clinical and medical tasks (e.g., clinical NLP, EHR, diagnostic reasoning, clinical QA, and medical imaging).
@@ -210,6 +214,8 @@ Systems that satisfy all four AI Scientist properties and operate on clinical da
 ---
 
 ## Public Health
+
+Population-level health: epidemiology, surveillance, outbreak intelligence, and digital epidemiology. Systems here reason over whole populations rather than individual patients.
 
 ### Public Health LLMs
 Public health language models applied to population-level health (e.g., epidemiology, surveillance, infodemiology, vaccine sentiment, and social determinants of health).
