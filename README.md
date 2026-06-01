@@ -97,7 +97,7 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 | --- | --- | --- | --- | --- |
 | BioResearcher | 2024 | [arXiv](https://arxiv.org/abs/2412.09429) | — | Hierarchical multi-agent system for dry-lab biomedical research with iterative refinement across search, literature, design, and programming |
 | AI Co-Scientist | 2025 | [arXiv](https://arxiv.org/abs/2502.18864) | — | Multi-agent generate-debate-evolve system with Elo-tournament hypothesis evolution for biomedical research |
-| Robin | 2025 | [arXiv](https://arxiv.org/abs/2505.13400) | [GitHub](https://github.com/Future-House/robin) | Three-agent lab-in-the-loop system for therapeutic-candidate discovery |
+| Robin | 2025 | [Nature](https://doi.org/10.1038/s41586-026-10652-y) ([arXiv](https://arxiv.org/abs/2505.13400)) | [GitHub](https://github.com/Future-House/robin) | Three-agent lab-in-the-loop system for therapeutic-candidate discovery |
 | CellVoyager | 2025 | [bioRxiv](https://doi.org/10.1101/2025.06.03.657517) | — | Autonomous agent reading scRNA-seq papers, running live-coded analyses, and iteratively revising hypotheses |
 | STELLA | 2025 | [arXiv](https://arxiv.org/abs/2507.02004) | [GitHub](https://github.com/zaixizhang/STELLA) | Self-evolving biomedical agent with a persistent Template Library and a dynamic Tool Ocean |
 | GenExp | 2025 | [bioRxiv](https://doi.org/10.1101/2025.06.24.661378) | — | Multi-agent platform for closed-loop yeast systems biology, extending the Adam and Eve robot-scientist line |
