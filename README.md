@@ -8,7 +8,7 @@ To situate AI Scientists within their technical lineage, the repository also inc
 
 These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
 
-- **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). 
+- **LLM**: a *generative* language model (text, or multimodal with language as a primary modality) capable of open-ended text generation and reasoning. Encoder-only or masked-language models such as BERT (and biomedical variants like BioBERT or PubMedBERT) are excluded, as they are representation models rather than the generative lineage that becomes Agents and AI Scientists.
 - **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks.
 - **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper: (i) multi-stage with varying autonomy, (ii) sustained and persistent, (iii) self-evolving, and (iv) knowledge-accessing and tool-using. 
 
@@ -125,7 +125,6 @@ Clinical and medical language models targeting clinical and medical tasks (e.g.,
 | MedAlpaca (2023) | [arXiv](https://arxiv.org/abs/2304.08247) | [GitHub](https://github.com/kbressem/medAlpaca) | Instruction-tuned medical LLaMA |
 | HuatuoGPT (2023) | [Findings of EMNLP](https://aclanthology.org/2023.findings-emnlp.725/) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT) | Chinese-language clinical chat LLM combining distilled and real doctor data |
 | Clinical Camel (2023) | [arXiv](https://arxiv.org/abs/2305.12031) | [GitHub](https://github.com/bowang-lab/clinical-camel) | LLaMA-2 fine-tune for medical question answering |
-| NYUTron (2023) | [Nature](https://doi.org/10.1038/s41586-023-06160-y) | [GitHub](https://github.com/nyuolab/NYUTron) | Clinical LLM pretrained on hospital-system notes for readmission, mortality, and length-of-stay prediction |
 | Med-PaLM (2023) | [Nature](https://doi.org/10.1038/s41586-023-06291-2) | [Project page](https://research.google/gr/med-palm/) | Medical LLM evaluated on the MultiMedQA suite |
 | Asclepius (2023) | [arXiv](https://arxiv.org/abs/2309.00237) | [GitHub](https://github.com/starmpcc/Asclepius) | Clinical LLM trained on synthetic notes as a shareable substitute for MIMIC |
 | MEDITRON-70B (2023) | [arXiv](https://arxiv.org/abs/2311.16079) | [GitHub](https://github.com/epfLLM/meditron) | Open Llama-2-based medical LLM |
@@ -231,10 +230,4 @@ Multi-step systems with tool use, planning, and memory that operate on bounded p
 | EpiAgent (2026) | [arXiv](https://arxiv.org/abs/2602.00299) | — | Iterative program-synthesis agent that auto-builds and recalibrates compartmental epidemic simulators |
 
 ### Public Health AI Scientists
-*This bucket is intentionally empty.* No published system in the public-health subdomain currently satisfies all four AI Scientist properties. The closest contenders fall short on the self-evolving criterion:
-
-- EpidemIQs (arXiv 2510.00024) automates a prompt-to-paper epidemic-modeling pipeline but operates as a fixed workflow without explicit self-evolution; it is therefore listed under [Public Health AI Agents](#public-health-ai-agents).
-- EpiAgent (Datta 2026) has multi-stage autonomy with verification and refinement loops, but is single-session and does not maintain cross-session memory or evolve strategies from prior failures.
-- PandemIQ Llama and the BEACON platform constitute a domain-adapted LLM plus a human-in-the-loop pipeline rather than a self-evolving research agent.
-- The CEPI Pandemic Preparedness Engine (PPX) is an announced platform under construction rather than a deployed system with published capabilities.
-
+*This bucket is intentionally empty.* No published system in the public-health subdomain currently satisfies all four AI Scientist properties. 
