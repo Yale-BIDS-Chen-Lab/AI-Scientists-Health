@@ -8,10 +8,9 @@ To situate AI Scientists within their technical lineage, the repository also inc
 
 These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
 
-- **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). Evaluation studies of LLMs, perspectives, and benchmarks are excluded.
-- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks. Benchmarks that evaluate agents are excluded; only the agent systems themselves are listed.
-- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper: (i) multi-stage with varying autonomy, (ii) sustained and persistent, (iii) self-evolving, and (iv) knowledge-accessing and tool-using. Reviews, perspectives, simulators, and partial pipelines that do not satisfy all four properties are excluded or reclassified.
-- **Subdomain**: an entry must have a demonstrated application or evaluation in the corresponding subdomain (Biomedical, Clinical, or Public Health).
+- **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). 
+- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks.
+- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper: (i) multi-stage with varying autonomy, (ii) sustained and persistent, (iii) self-evolving, and (iv) knowledge-accessing and tool-using. 
 
 The table summarizes how the three paradigms differ across these properties:
 
@@ -39,7 +38,6 @@ The table summarizes how the three paradigms differ across these properties:
   - [Public Health AI Scientists](#public-health-ai-scientists)
 - [Contributing](#contributing)
 
-Within each cell, entries are sorted chronologically (oldest first).
 
 ---
 
