@@ -36,7 +36,6 @@ The table summarizes how the three paradigms differ across these properties:
   - [Public Health LLMs](#public-health-llms)
   - [Public Health AI Agents](#public-health-ai-agents)
   - [Public Health AI Scientists](#public-health-ai-scientists)
-- [Contributing](#contributing)
 
 
 ---
@@ -44,7 +43,7 @@ The table summarizes how the three paradigms differ across these properties:
 ## Biomedical
 
 ### Biomedical LLMs
-Text-based biomedical language models and multimodal LMs in which natural language is a primary modality (e.g., text-and-molecule, text-and-DNA, text-and-protein hybrids). Pure biological-sequence foundation models (e.g., ESM, Geneformer, scGPT, scFoundation, DNABERT-2, ProtTrans, ProGen, ESM3) are excluded; the perspective paper references them as tools used by AI Scientists rather than as LLMs in the language-model lineage that becomes Agents and AI Scientists.
+Biomedical language models, including text-based models and multimodal models in which natural language is a primary modality (e.g., text-and-molecule, text-and-DNA, and text-and-protein hybrids).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
@@ -66,7 +65,7 @@ Text-based biomedical language models and multimodal LMs in which natural langua
 | BioReason-Pro (2026) | [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1) | [GitHub](https://github.com/bowang-lab/BioReason-Pro) | Multimodal reasoning LLM coupling a Qwen backbone with ESM3 and a GO graph for protein function prediction |
 
 ### Biomedical AI Agents
-Multi-step systems with tool use, planning, and bounded task scope. Systems that approach AI Scientist criteria but lack a self-evolving mechanism are listed here.
+Multi-step systems with tool use, planning, and memory that operate on bounded biomedical research tasks (e.g., drug discovery, omics analysis, protein and molecule design, and biomedical literature).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
@@ -118,7 +117,7 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 ## Clinical
 
 ### Clinical LLMs
-Clinical and medical language models targeting clinical NLP, EHR, diagnostic reasoning, clinical QA, and medical imaging in clinical contexts.
+Clinical and medical language models targeting clinical and medical tasks (e.g., clinical NLP, EHR, diagnostic reasoning, clinical QA, and medical imaging).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
@@ -151,7 +150,7 @@ Clinical and medical language models targeting clinical NLP, EHR, diagnostic rea
 | AyurParam (2025) | [arXiv](https://arxiv.org/abs/2511.02374) | [HF](https://huggingface.co/bharatgenai/AyurParam) | Bilingual Hindi-English instruction-tuned LLM specialized for Ayurveda and Indian traditional medicine |
 
 ### Clinical AI Agents
-Agents for clinical reasoning, EHR query, trial matching, and clinical decision support. Benchmarks that evaluate these agents (e.g., MedAgentBench, AgentClinic) are not listed here because they are evaluation frameworks rather than agent systems.
+Multi-step systems with tool use, planning, and memory that operate on bounded clinical tasks (e.g., clinical reasoning, EHR query, trial matching, and clinical decision support).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
@@ -202,7 +201,7 @@ Systems that satisfy all four AI Scientist properties and operate on clinical da
 ## Public Health
 
 ### Public Health LLMs
-Language models applied to population-level health: epidemiology, surveillance, infodemiology, vaccine sentiment, social determinants of health.
+Public health language models applied to population-level health (e.g., epidemiology, surveillance, infodemiology, vaccine sentiment, and social determinants of health).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
@@ -213,7 +212,7 @@ Language models applied to population-level health: epidemiology, surveillance, 
 | PandemIQ Llama (2025) | [AAAI](https://doi.org/10.1609/aaai.v40i46.41301) | [GitHub](https://github.com/noc-lab/PandemIQ-Llama) | Llama-3.1 continually pretrained on a curated pandemic corpus for outbreak surveillance |
 
 ### Public Health AI Agents
-Agents with tool use, planning, and retrieval for outbreak detection, epidemiological modeling, evidence synthesis, and policy reasoning.
+Multi-step systems with tool use, planning, and memory that operate on bounded public health tasks (e.g., outbreak detection, epidemiological modeling, evidence synthesis, and policy reasoning).
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
