@@ -135,6 +135,8 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 | ASCollab | 2025 | [arXiv](https://arxiv.org/abs/2510.08619) | — | Heterogeneous research agents in self-evolving collaboration networks for cancer-omics discovery |
 | Kosmos | 2025 | [arXiv](https://arxiv.org/abs/2511.02824) | — | Long-horizon autonomous research campaigns coordinated by a structured world model |
 | SAGA | 2025 | [arXiv](https://arxiv.org/abs/2512.21782) | — | Bi-level architecture that evolves objective functions themselves for biomolecule design |
+| BioMedAgent | 2026 | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-026-01634-6) | — | Self-evolving multi-agent framework for autonomous biomedical data analysis that learns tool selection from documentation and generates custom code when no suitable tool exists |
+| AutoScientists | 2026 | [arXiv](https://arxiv.org/abs/2605.28655) | [GitHub](https://github.com/mims-harvard/AutoScientists) | Decentralized multi-agent system for long-running scientific experimentation in which agent teams self-organize around hypotheses and share successes and failures to redirect the search |
 
 ---
 
@@ -218,6 +220,7 @@ Systems that satisfy all four AI Scientist properties and operate on clinical da
 | --- | --- | --- | --- | --- |
 | HealthFlow | 2025 | [arXiv](https://arxiv.org/abs/2508.02621) | [GitHub](https://github.com/yhzhu99/HealthFlow) | Self-evolving multi-agent system for autonomous EHR-analysis research with persistent strategy-heuristic memory across sessions |
 | SPARK | 2026 | [Nature Medicine](https://www.nature.com/articles/s41591-026-04357-y) | — | Agentic system generating biological hypotheses from histology, instantiating analytical tools, and refining across iterations for cancer prognosis |
+| Medical AI Scientist | 2026 | [arXiv](https://arxiv.org/abs/2603.28589) | [Homepage](https://cuhk-aim-group.github.io/Med-AI-Scientist-Homepage/) | Autonomous clinical research framework spanning idea generation, experiment execution, and manuscript drafting, using a clinician-engineer co-reasoning mechanism across three modes of medical scientific autonomy |
 
 ---
 
