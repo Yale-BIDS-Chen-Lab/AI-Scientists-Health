@@ -59,7 +59,7 @@ Biomedical language models, including text-based models and multimodal models in
 | MAMMAL (2024) | [arXiv](https://arxiv.org/abs/2410.22367) | [GitHub](https://github.com/BiomedSciAI/biomed-multi-alignment) | Text-instructed multimodal foundation model unifying protein, small-molecule, and single-cell modalities for drug discovery |
 | DrugGen (2024) | [arXiv](https://arxiv.org/abs/2411.14157) | — | RL-tuned LLM for target-conditioned SMILES generation with ADMET-aware decoding |
 | NatureLM (2025) | [arXiv](https://arxiv.org/abs/2502.07527) | [HF](https://huggingface.co/microsoft/NatureLM-8x7B) | Sequence LM unifying small molecules, proteins, DNA, RNA, and materials, controllable via text instructions |
-| BindGPT (2025) | [AAAI](https://arxiv.org/abs/2406.03686) | — | GPT-style LM for pocket-conditioned 3D ligand generation with RL fine-tuning |
+| BindGPT (2025) | [AAAI](https://arxiv.org/abs/2406.03686) | [Project page](https://bindgpt.github.io/) | GPT-style LM for pocket-conditioned 3D ligand generation with RL fine-tuning |
 | TxGemma (2025) | [arXiv](https://arxiv.org/abs/2504.06196) | [HF](https://huggingface.co/google/txgemma-9b-chat) | Gemma-based open models specialized for therapeutic-discovery tasks |
 | BioReason (2025) | [arXiv](https://arxiv.org/abs/2505.23579) | [GitHub](https://github.com/bowang-lab/BioReason) | DNA-LLM with RL-based reasoning training for variant-effect and pathway prediction |
 | BioReason-Pro (2026) | [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1) | [GitHub](https://github.com/bowang-lab/BioReason-Pro) | Multimodal reasoning LLM coupling a Qwen backbone with ESM3 and a GO graph for protein function prediction |
