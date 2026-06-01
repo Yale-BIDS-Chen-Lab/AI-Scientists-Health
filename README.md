@@ -1,51 +1,24 @@
 # AI-Scientists-Health
 
-This repository is centered on **AI Scientists in health** and is intended to serve as a public, regularly updated companion resource to the paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward* (2026).
+This repository is a public, regularly updated companion to the 2026 paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward*. **AI Scientists** are systems that pursue scientific questions through multi-stage, sustained, and self-evolving inquiry: generating hypotheses, designing and running evaluations, interpreting results, and refining research directions. This paradigm is especially consequential in health, where heterogeneous data, stringent evidence requirements, and demanding governance make trustworthy deployment hard.
 
-AI Scientists are systems that pursue scientific questions through multi-stage, sustained, and adaptive inquiry, including generating hypotheses, designing and executing evaluations, interpreting results, and iteratively refining research directions. In health, this emerging paradigm is especially consequential because heterogeneous multimodal data, stringent evidence requirements, and demanding governance expectations make the path from capability to trustworthy deployment particularly challenging.
+To situate AI Scientists within their technical lineage, the repository also includes **selected** LLMs and AI Agents. It is **not** an exhaustive catalog of health-related LLMs or agents, but a focused, evolving curation of the systems most relevant to the emerging AI Scientist paradigm. Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
 
-To situate AI Scientists within their broader technical lineage, this repository also includes **selected** large language models (LLMs) and AI Agents. These entries are included only to document the paradigm transition, clarify boundary cases, and provide subdomain-specific context. This repository is therefore **not** intended to be an exhaustive catalog of all health-related LLMs or AI agents. Instead, it is designed to support transparent and evolving curation of systems most relevant to interpreting AI Scientists in health as an emerging paradigm.
+## The three paradigms and how entries are categorized
 
-Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
-
-## The three paradigms: LLMs, AI Agents, and AI Scientists
-
-The three paradigms form a technical lineage in which each stage builds on the one before it. **LLMs** provide the broad reasoning substrate; **AI Agents** extend an LLM with memory, tool use, and planning to complete bounded, multi-step tasks; and **AI Scientists** extend agents further, moving from task completion to sustained scientific inquiry across an entire research trajectory.
+These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. The table below distinguishes them and defines how each entry is categorized; properties (i)-(iv) are the four defining properties of an AI Scientist (Section 2.1 of the paper).
 
 | Dimension | LLM | AI Agent | AI Scientist |
 | --- | --- | --- | --- |
-| Unit of operation | Single response | Bounded task | Research trajectory |
-| Interaction | One-shot generation | Multi-step, with tools | Multi-stage inquiry cycle |
-| Time horizon | Within a prompt | Short, predefined | Long-horizon (days to months) |
-| Objective | Generate text | Complete a task | Conduct science: hypothesize, test, refine |
-| Memory | Context window | Within-task | Persistent across sessions |
-| Self-evolution | No | No | Yes |
+| What it is | The language model itself | An LLM plus tools, planning, and memory | A multi-component system over a research trajectory |
+| Scope | Single response | Bounded task | End-to-end research cycle |
+| (i) Multi-stage across the research cycle | No | No (bounded) | Yes |
+| (ii) Persistent memory across sessions | No | No (within-task) | Yes |
+| (iii) Self-evolving | No | Yes/No | Yes |
+| (iv) Knowledge access and tool use | No | Yes | Yes |
 | Judged by | Response quality | Task completion | Novelty, rigor, reproducibility |
 
-The table captures the conceptual contrast. The precise inclusion and exclusion criteria that determine an entry's cell are defined next.
-
-## Categorization rules
-
-Each entry is placed in exactly one cell based on the following criteria:
-
-- **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). Evaluation studies of LLMs, perspectives, and benchmarks are excluded.
-- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks. Benchmarks that evaluate agents are excluded; only the agent systems themselves are listed.
-- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper:  
-  (1) multi-stage with varying autonomy,  
-  (2) sustained and persistent,  
-  (3) self-evolving, and  
-  (4) knowledge-accessing and tool-using.  
-  Reviews, perspectives, simulators, and partial pipelines that do not satisfy all four properties are excluded or reclassified.
-- **Subdomain**: an entry must have a demonstrated application or evaluation in the corresponding subdomain.
-
-Paradigm-defining general-purpose AI Scientist systems from machine learning or algorithmic domains (for example, *The AI Scientist*, *AlphaEvolve*, *DeepScientist*, *EvoScientist*, *AI-Researcher*, and *Agent Laboratory*) are foundational for understanding the broader landscape, but are not listed here because they do not satisfy the subdomain requirement. Readers should consult Table 1 of the paper for the broader cross-domain view.
-
-## Notes column format
-
-Each entry in the Notes column follows a single shared structure: `[architecture or approach descriptor] for [primary task or domain]; [optional one distinctive mechanism]`. Notes are limited to roughly 25 words and one sentence.
-
-- **Include**: backbone or architectural noun (e.g., "multi-agent", "RAG", "self-evolving"); primary domain or modality (e.g., "EHR", "scRNA-seq", "histology", "outbreak forecasting"); primary task or capability (e.g., "differential diagnosis", "trial matching"); and one distinctive mechanism only if it is defining (e.g., "Elo-tournament hypothesis evolution", "world-model coordination").
-- **Exclude**: institutional or lab names (e.g., "FutureHouse", "Mahmood Lab", "NCBI"); superlatives and chronology adjectives (e.g., "first", "seminal", "canonical", "early"); benchmark numbers, SOTA claims, and comparisons (e.g., "+15% on Y", "outperforms GPT-X"); case-study findings (e.g., specific disease names, drug names); subsequent or historical context (e.g., "predecessor to X", "subsequently shown to..."); and parameter counts unless they are the sole differentiator.
+A system is classified as an **AI Scientist** only if it satisfies all four properties (i)-(iv); a tool-using, planning system with bounded scope is an **AI Agent**; the model itself is an **LLM**. Each entry must also have a demonstrated application or evaluation in its subdomain (Biomedical, Clinical, or Public Health). Benchmarks, evaluation studies, reviews, perspectives, and simulators are excluded; only the system itself is listed.
 
 ## Table of Contents
 - [Biomedical](#biomedical) (preclinical discovery: drug discovery, omics, protein and molecule modeling, biomedical literature)
@@ -273,4 +246,4 @@ Contributions are welcome. Please open a PR and:
 2. Use stable links (DOI, arXiv, official publisher page, or canonical repository).
 3. Avoid duplicates and maintain chronological ordering within each cell.
 4. Do not add reviews, perspective articles, benchmarks, evaluation studies, or simulators; only the LLM, AI Agent, or AI Scientist system itself.
-5. Write the Notes column according to the format described in [Notes column format](#notes-column-format): one sentence, around 25 words, focused on architecture or approach and primary task or domain, and free of institutional names, superlatives, benchmark numbers, comparisons, case-study findings, and historical context.
+5. Write the Notes column as one sentence of roughly 25 words, focused on architecture or approach and primary task or domain, and free of institutional names, superlatives, benchmark numbers, comparisons, case-study findings, and historical context.
