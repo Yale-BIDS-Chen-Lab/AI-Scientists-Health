@@ -69,7 +69,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded b
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
-| ChemCrow (2023) | [Nature Machine Intelligence](https://doi.org/10.1038/s42256-024-00832-8) ([arXiv](https://arxiv.org/abs/2304.05376)) | [GitHub](https://github.com/ur-whitelab/chemcrow-public) | LLM agent equipped with chemistry tools for organic synthesis planning |
+| ChemCrow (2023) | [Nature Machine Intelligence](https://doi.org/10.1038/s42256-024-00832-8) | [GitHub](https://github.com/ur-whitelab/chemcrow-public) | LLM agent equipped with chemistry tools for organic synthesis planning |
 | Coscientist (Boiko) (2023) | [Nature](https://doi.org/10.1038/s41586-023-06792-0) | [GitHub](https://github.com/gomesgroup/coscientist) | GPT-4 agent that plans, codes, and runs chemistry experiments on a robotic platform |
 | BioPlanner (2023) | [arXiv](https://arxiv.org/abs/2310.10632) | [GitHub](https://github.com/bioplanner/bioplanner) | LLM agent converting natural-language biology protocols into evaluable pseudocode |
 | GeneGPT (2024) | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btae075) | [GitHub](https://github.com/ncbi/GeneGPT) | Tool-augmented LLM calling BLAST, Gene, dbSNP, and OMIM APIs to answer genomics questions |
@@ -98,7 +98,7 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 | --- | --- | --- | --- |
 | BioResearcher (2024) | [arXiv](https://arxiv.org/abs/2412.09429) | [GitHub](https://github.com/XMUDM/BioResearcher) | Hierarchical multi-agent system for dry-lab biomedical research with iterative refinement across search, literature, design, and programming |
 | AI Co-Scientist (2025) | [arXiv](https://arxiv.org/abs/2502.18864) | [Project page](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/) | Multi-agent generate-debate-evolve system with Elo-tournament hypothesis evolution for biomedical research |
-| Robin (2025) | [Nature](https://doi.org/10.1038/s41586-026-10652-y) ([arXiv](https://arxiv.org/abs/2505.13400)) | [GitHub](https://github.com/Future-House/robin) | Three-agent lab-in-the-loop system for therapeutic-candidate discovery |
+| Robin (2025) | [Nature](https://doi.org/10.1038/s41586-026-10652-y) | [GitHub](https://github.com/Future-House/robin) | Three-agent lab-in-the-loop system for therapeutic-candidate discovery |
 | CellVoyager (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.03.657517) | [GitHub](https://github.com/zou-group/CellVoyager) | Autonomous agent reading scRNA-seq papers, running live-coded analyses, and iteratively revising hypotheses |
 | STELLA (2025) | [arXiv](https://arxiv.org/abs/2507.02004) | [GitHub](https://github.com/zaixizhang/STELLA) | Self-evolving biomedical agent with a persistent Template Library and a dynamic Tool Ocean |
 | GenExp (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.24.661378) | [GitHub](https://github.com/DanielBrunnsaker/GenExp) | Multi-agent platform for closed-loop yeast systems biology, extending the Adam and Eve robot-scientist line |
@@ -146,7 +146,6 @@ Clinical and medical language models targeting clinical and medical tasks (e.g.,
 | Baichuan-M1 (2025) | [arXiv](https://arxiv.org/abs/2502.12671) | [GitHub](https://github.com/baichuan-inc/Baichuan-M1-14B) | Chinese-English medical LLM trained from scratch with an explicit medical curriculum |
 | Preferred-MedLLM-Qwen-72B (2025) | [arXiv](https://arxiv.org/abs/2504.18080) | [HF](https://huggingface.co/pfnet/Preferred-MedLLM-Qwen-72B) | Qwen-2.5 with continued Japanese medical pretraining and reasoning preference optimization |
 | Lingshu (2025) | [arXiv](https://arxiv.org/abs/2506.07044) | [GitHub](https://github.com/alibaba-damo-academy/lingshu) | Qwen2.5-VL-based generalist medical multimodal LLM covering multiple imaging modalities |
-| SNUH KMed.ai (2025) | [SNUH announcement](http://www.snuh.org/global/en/about/newsView.do?bbs_no=7022) | — | Korean clinical LLM trained on de-identified hospital clinical texts |
 | AyurParam (2025) | [arXiv](https://arxiv.org/abs/2511.02374) | [Project page](https://bharatgen.com/ayurparam-a-specialized-llm-for-ayurveda/) | Bilingual Hindi-English instruction-tuned LLM specialized for Ayurveda and Indian traditional medicine |
 
 ### Clinical AI Agents
@@ -163,7 +162,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded c
 | ClinicalAgent (2024) | [ACM BCB](https://doi.org/10.1145/3698587.3701359) | [GitHub](https://github.com/LeoYML/clinical-agent) | Multi-agent system with role-specialized agents for clinical-trial outcome prediction |
 | MDAgents (2024) | [NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2024/hash/90d1fc07f46e31387978b88e7e057a31-Abstract-Conference.html) | [GitHub](https://github.com/mitmedialab/MDAgents) | Adaptive multi-agent framework that scales collaboration to case complexity |
 | TrialGPT (2024) | [Nature Communications](https://doi.org/10.1038/s41467-024-53081-z) | [GitHub](https://github.com/ncbi-nlp/TrialGPT) | Zero-shot LLM agent for patient-to-trial matching |
-| RadioRAG (2024) | [Radiology: Artificial Intelligence](https://pubs.rsna.org/doi/10.1148/ryai.240476) ([arXiv](https://arxiv.org/abs/2407.15621)) | [GitHub](https://github.com/tayebiarasteh/RadioRAG) | Online retrieval-augmented agent for radiology question answering |
+| RadioRAG (2024) | [Radiology: Artificial Intelligence](https://pubs.rsna.org/doi/10.1148/ryai.240476) | [GitHub](https://github.com/tayebiarasteh/RadioRAG) | Online retrieval-augmented agent for radiology question answering |
 | MMedAgent (2024) | [EMNLP Findings](https://aclanthology.org/2024.findings-emnlp.510/) | [GitHub](https://github.com/Wangyixinxin/MMedAgent) | Multimodal medical agent invoking specialized imaging tools for segmentation, classification, and grounding |
 | SurgeryLLM (2024) | [npj Digital Medicine](https://www.nature.com/articles/s41746-024-01391-3) | — | RAG-based framework for surgical decision support grounded in evidence-based guidelines |
 | MMed-RAG (2024) | [arXiv](https://arxiv.org/abs/2410.13085) | [GitHub](https://github.com/richard-peng-xia/MMed-RAG) | Multimodal medical RAG with domain-aware retrieval across imaging modalities |
@@ -178,7 +177,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded c
 | TrialGenie (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.04.17.25326033v1) | — | Five-agent system for autonomous clinical-trial protocol design and refinement |
 | DrugGPT (2025) | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-025-01471-z) | — | Knowledge-grounded collaborative agent for clinical drug analysis |
 | Ferber autonomous oncology agent (2025) | [Nature Cancer](https://www.nature.com/articles/s43018-025-00991-6) | [GitHub](https://github.com/Dyke-F/LLM_RAG_Agent) | GPT-4 oncology agent orchestrating imaging, segmentation, ontology, and literature tools |
-| WiseMind (MARiA) (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-026-02559-9) ([arXiv](https://arxiv.org/abs/2502.20689)) | [GitHub](https://github.com/YWU99u/WiseMind-DDx-Psyc) | Dual-mind agent architecture with a DSM-5 knowledge graph for psychiatric diagnosis |
+| WiseMind (MARiA) (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-026-02559-9) | [GitHub](https://github.com/YWU99u/WiseMind-DDx-Psyc) | Dual-mind agent architecture with a DSM-5 knowledge graph for psychiatric diagnosis |
 | COMPOSER-LLM (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01689-w) | [GitHub](https://github.com/NematiLab/COMPOSER-LLM) | Sepsis-prediction system using an LLM to extract context for high-uncertainty cases |
 | PEACH (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01858-x) | — | Perioperative chatbot integrating institution-specific guidelines as a regulated decision-support tool |
 | EvoMDT (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-02304-8) | — | Coordinator-mediated multi-cancer MDT system with per-case self-evolution from physician feedback |
@@ -205,7 +204,7 @@ Public health language models applied to population-level health (e.g., epidemio
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
-| PandemicLLM (2024) | [Nature Computational Science](https://doi.org/10.1038/s43588-025-00798-6) ([arXiv](https://arxiv.org/abs/2404.06962)) | [GitHub](https://github.com/miemieyanga/PandemicLLM) | Multimodal LLM for outbreak forecasting as text reasoning over policy, genomic, and spatial signals |
+| PandemicLLM (2024) | [Nature Computational Science](https://doi.org/10.1038/s43588-025-00798-6) | [GitHub](https://github.com/miemieyanga/PandemicLLM) | Multimodal LLM for outbreak forecasting as text reasoning over policy, genomic, and spatial signals |
 | SDoH-GPT (2024) | [arXiv](https://arxiv.org/abs/2407.17126) | — | LLM pipeline extracting social determinants of health at population scale |
 | EpiLLM (2025) | [arXiv](https://arxiv.org/abs/2505.12738) | — | Dual-branch LLM aligning case-count and human-mobility tokens for spatio-temporal epidemic forecasting |
 | PH-LLM (Infoveillance) (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.02.08.25321587v1) | [GitHub](https://github.com/luoyuanlab/PH-LLM) | Open multilingual Qwen-2.5 suite for real-time public-health infoveillance |
@@ -216,7 +215,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded p
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
-| AD-AutoGPT (2023) | [PLOS Global Public Health](https://doi.org/10.1371/journal.pgph.0004383) ([arXiv](https://arxiv.org/abs/2306.10095)) | [GitHub](https://github.com/levyisthebest/AD-AutoGPT) | Autonomous LLM agent scraping disease news and visualizing spatio-temporal infodemiology trends |
+| AD-AutoGPT (2023) | [PLOS Global Public Health](https://doi.org/10.1371/journal.pgph.0004383) | [GitHub](https://github.com/levyisthebest/AD-AutoGPT) | Autonomous LLM agent scraping disease news and visualizing spatio-temporal infodemiology trends |
 | Epidemic Modeling with Generative Agents (2023) | [arXiv](https://arxiv.org/abs/2307.04986) | [GitHub](https://github.com/bear96/GABM-Epidemic) | Generative agents reproducing quarantine, isolation, and multi-wave epidemic dynamics |
 | Human-AI Evidence Synthesis (2024) | [Cell Reports Sustainability](https://doi.org/10.1016/j.crsus.2024.100132) | [GitHub](https://github.com/s-spillias/GPT-Screening) | Tool-using LLM workflow for evidence-synthesis screening in public-health reviews |
 | LLM Data Extraction for Evidence Synthesis (2024) | [Research Synthesis Methods](https://doi.org/10.1002/jrsm.1710) | — | LLM-as-extractor agent for public-health evidence synthesis at scale |
