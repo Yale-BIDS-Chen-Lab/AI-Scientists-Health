@@ -71,7 +71,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded b
 | --- | --- | --- | --- |
 | ChemCrow (2023) | [Nature Machine Intelligence](https://doi.org/10.1038/s42256-024-00832-8) ([arXiv](https://arxiv.org/abs/2304.05376)) | [GitHub](https://github.com/ur-whitelab/chemcrow-public) | LLM agent equipped with chemistry tools for organic synthesis planning |
 | Coscientist (Boiko) (2023) | [Nature](https://doi.org/10.1038/s41586-023-06792-0) | — | GPT-4 agent that plans, codes, and runs chemistry experiments on a robotic platform |
-| BioPlanner (2024) | [arXiv](https://arxiv.org/abs/2310.10632) | [GitHub](https://github.com/bioplanner/bioplanner) | LLM agent converting natural-language biology protocols into evaluable pseudocode |
+| BioPlanner (2023) | [arXiv](https://arxiv.org/abs/2310.10632) | [GitHub](https://github.com/bioplanner/bioplanner) | LLM agent converting natural-language biology protocols into evaluable pseudocode |
 | GeneGPT (2024) | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btae075) | [GitHub](https://github.com/ncbi/GeneGPT) | Tool-augmented LLM calling BLAST, Gene, dbSNP, and OMIM APIs to answer genomics questions |
 | ProtAgents (2024) | [Digital Discovery](https://doi.org/10.1039/D4DD00013G) | — | Multi-agent system for de novo protein design combining MD and physics simulators with LLM planners |
 | CRISPR-GPT (2024) | [arXiv](https://arxiv.org/abs/2404.18021) | — | Tool-augmented agent for gRNA design and protocol selection across CRISPR editing systems |
@@ -83,7 +83,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded b
 | PaperQA2 (2024) | [arXiv](https://arxiv.org/abs/2409.13740) | [GitHub](https://github.com/Future-House/paper-qa) | RAG agent decomposing scientific-literature QA into search, summarize, and answer-revision tools |
 | AtomAgents (2025) | [PNAS](https://doi.org/10.1073/pnas.2414074122) | — | Multi-agent system coupling LLMs to physics simulators for materials and biomaterials design |
 | BioMaster (2025) | [bioRxiv](https://doi.org/10.1101/2025.01.23.634608) | — | Role-based multi-agent RAG system automating RNA-seq, ChIP-seq, scRNA-seq, and Hi-C workflows |
-| AutoProteinEngine (2025) | [COLING Industry](https://aclanthology.org/2025.coling-industry.10/) | — | LLM agent automating protein-engineering AutoML pipelines via tool calling |
+| AutoProteinEngine (2025) | [COLING Industry](https://aclanthology.org/2025.coling-industry.36/) | — | LLM agent automating protein-engineering AutoML pipelines via tool calling |
 | LIDDiA (2025) | [arXiv](https://arxiv.org/abs/2502.13959) | [GitHub](https://github.com/ninglab/LIDDiA) | Reasoner-Executor-Evaluator-Memory agent for in-silico drug discovery |
 | PharmAgents (2025) | [arXiv](https://arxiv.org/abs/2503.22164) | — | Multi-agent system covering target discovery, lead identification, optimization, and preclinical evaluation in silico |
 | ESCARGOT (2025) | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btaf031) | — | Graph-of-Thoughts agent over biomedical knowledge graphs for multi-hop reasoning |
@@ -102,8 +102,8 @@ Systems demonstrated on biomedical research that satisfy all four AI Scientist p
 | CellVoyager (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.03.657517) | — | Autonomous agent reading scRNA-seq papers, running live-coded analyses, and iteratively revising hypotheses |
 | STELLA (2025) | [arXiv](https://arxiv.org/abs/2507.02004) | [GitHub](https://github.com/zaixizhang/STELLA) | Self-evolving biomedical agent with a persistent Template Library and a dynamic Tool Ocean |
 | GenExp (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.24.661378) | — | Multi-agent platform for closed-loop yeast systems biology, extending the Adam and Eve robot-scientist line |
-| NeuroDISK (2025) | [bioRxiv](https://doi.org/10.1101/2025.02.10.637567) | — | Continuous inquiry-driven discovery system over neuroimaging-genetics data |
-| OmniCellAgent (2025) | [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.07.21.665802) | — | Co-scientist for single-cell precision-medicine discovery loops |
+| NeuroDISK (2025) | [bioRxiv](https://doi.org/10.1101/2025.02.14.638360) | — | Continuous inquiry-driven discovery system over neuroimaging-genetics data |
+| OmniCellAgent (2025) | [bioRxiv](https://doi.org/10.1101/2025.07.31.667797) | — | Co-scientist for single-cell precision-medicine discovery loops |
 | BioLab (2025) | [bioRxiv](https://doi.org/10.1101/2025.09.03.674085) | — | Eight-agent Planner-Reasoner-Critic-Memory system orchestrating biomolecular tools for antibody and biomolecule design |
 | Virtual Lab (2025) | [Nature](https://doi.org/10.1038/s41586-025-09442-9) | [GitHub](https://github.com/zou-group/virtual-lab) | LLM principal-investigator dynamically instantiating a scientist team for biomolecule design |
 | ASCollab (2025) | [arXiv](https://arxiv.org/abs/2510.08619) | — | Heterogeneous research agents in self-evolving collaboration networks for cancer-omics discovery |
@@ -158,7 +158,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded c
 | AMIE (2024) | [arXiv](https://arxiv.org/abs/2401.05654) | — | Self-play history-taking diagnostic agent for primary-care consultations |
 | MedAgents (2024) | [ACL Findings](https://aclanthology.org/2024.findings-acl.33/) | [GitHub](https://github.com/gersteinlab/MedAgents) | Multi-disciplinary role-play collaboration framework for zero-shot medical reasoning |
 | Agent Hospital (2024) | [arXiv](https://arxiv.org/abs/2405.02957) | — | Simulated-hospital environment where doctor agents self-evolve via virtual patients |
-| TriageAgent (2024) | [Findings of EMNLP](https://aclanthology.org/2024.findings-emnlp.886/) | — | Multi-agent debate framework for emergency triage decisions |
+| TriageAgent (2024) | [Findings of EMNLP](https://aclanthology.org/2024.findings-emnlp.329/) | — | Multi-agent debate framework for emergency triage decisions |
 | EHRAgent (2024) | [EMNLP](https://arxiv.org/abs/2401.07128) | [GitHub](https://github.com/wshi83/EhrAgent) | Code-generating agent for structured EHR query and reasoning |
 | ClinicalAgent (2024) | [ACM BCB](https://doi.org/10.1145/3698587.3701359) | — | Multi-agent system with role-specialized agents for clinical-trial outcome prediction |
 | MDAgents (2024) | [NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2024/hash/90d1fc07f46e31387978b88e7e057a31-Abstract-Conference.html) | [GitHub](https://github.com/mitmedialab/MDAgents) | Adaptive multi-agent framework that scales collaboration to case complexity |
