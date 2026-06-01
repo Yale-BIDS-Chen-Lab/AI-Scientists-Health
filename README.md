@@ -6,19 +6,23 @@ To situate AI Scientists within their technical lineage, the repository also inc
 
 ## The three paradigms and how entries are categorized
 
-These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. The table below distinguishes them and defines how each entry is categorized; properties (i)-(iv) are the four defining properties of an AI Scientist (Section 2.1 of the paper).
+These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
+
+- **LLM**: a language model itself (text, sequence, or multimodal foundation model with language as a primary modality). Evaluation studies of LLMs, perspectives, and benchmarks are excluded.
+- **AI Agent**: a system that performs multi-step reasoning with tool use, planning, and memory, but operates on bounded tasks. Benchmarks that evaluate agents are excluded; only the agent systems themselves are listed.
+- **AI Scientist**: a system that satisfies all four properties defined in Section 2.1 of the paper: (i) multi-stage with varying autonomy, (ii) sustained and persistent, (iii) self-evolving, and (iv) knowledge-accessing and tool-using. Reviews, perspectives, simulators, and partial pipelines that do not satisfy all four properties are excluded or reclassified.
+- **Subdomain**: an entry must have a demonstrated application or evaluation in the corresponding subdomain (Biomedical, Clinical, or Public Health).
+
+The table summarizes how the three paradigms differ across these properties:
 
 | Dimension | LLM | AI Agent | AI Scientist |
 | --- | --- | --- | --- |
-| What it is | The language model itself | An LLM plus tools, planning, and memory | A multi-component system over a research trajectory |
 | Scope | Single response | Bounded task | End-to-end research cycle |
 | (i) Multi-stage across the research cycle | No | No (bounded) | Yes |
 | (ii) Persistent memory across sessions | No | No (within-task) | Yes |
 | (iii) Self-evolving | No | Yes/No | Yes |
 | (iv) Knowledge access and tool use | No | Yes | Yes |
 | Judged by | Response quality | Task completion | Novelty, rigor, reproducibility |
-
-A system is classified as an **AI Scientist** only if it satisfies all four properties (i)-(iv); a tool-using, planning system with bounded scope is an **AI Agent**; the model itself is an **LLM**. Each entry must also have a demonstrated application or evaluation in its subdomain (Biomedical, Clinical, or Public Health). Benchmarks, evaluation studies, reviews, perspectives, and simulators are excluded; only the system itself is listed.
 
 ## Table of Contents
 - [Biomedical](#biomedical) (preclinical discovery: drug discovery, omics, protein and molecule modeling, biomedical literature)
