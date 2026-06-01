@@ -4,6 +4,19 @@ This repository is a public, regularly updated companion to the 2026 paper *From
 
 To situate AI Scientists within their technical lineage, the repository also includes **selected** LLMs and AI Agents. It is **not** an exhaustive catalog of health-related LLMs or agents, but a focused, evolving curation of the systems most relevant to the emerging AI Scientist paradigm. Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
 
+## Citation
+
+If you find this repository useful, please cite our paper:
+
+```bibtex
+@article{aiscientists2026,
+  title   = {From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward},
+  author  = {},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}
+```
+
 ## The three paradigms and how entries are categorized
 
 These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
@@ -231,3 +244,10 @@ Multi-step systems with tool use, planning, and memory that operate on bounded p
 
 ### Public Health AI Scientists
 *This bucket is intentionally empty.* No published system in the public-health subdomain currently satisfies all four AI Scientist properties. 
+
+## Contributing
+
+Contributions are welcome. Please open a pull request and:
+- place the entry in the cell matching its paradigm and subdomain;
+- use a stable link (DOI, arXiv, or official repository) and avoid duplicates;
+- list only the system itself, not benchmarks, reviews, or evaluation studies.
