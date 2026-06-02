@@ -142,7 +142,7 @@ Clinical and medical language models targeting clinical and medical tasks (e.g.,
 | MedAlpaca (2023) | [arXiv](https://arxiv.org/abs/2304.08247) | [GitHub](https://github.com/kbressem/medAlpaca) | Instruction-tuned medical LLaMA |
 | HuatuoGPT (2023) | [Findings of EMNLP](https://aclanthology.org/2023.findings-emnlp.725/) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT) | Chinese-language clinical chat LLM combining distilled and real doctor data |
 | Clinical Camel (2023) | [arXiv](https://arxiv.org/abs/2305.12031) | [GitHub](https://github.com/bowang-lab/clinical-camel) | LLaMA-2 fine-tune for medical question answering |
-| Med-PaLM (2023) | [Nature](https://doi.org/10.1038/s41586-023-06291-2) | [Project page](https://research.google/gr/med-palm/) | Medical LLM evaluated on the MultiMedQA suite |
+| Med-PaLM (2023) | [Nature](https://doi.org/10.1038/s41586-023-06291-2) | [Project page](https://sites.research.google/gr/med-palm/) | Medical LLM evaluated on the MultiMedQA suite |
 | Asclepius (2023) | [arXiv](https://arxiv.org/abs/2309.00237) | [GitHub](https://github.com/starmpcc/Asclepius) | Clinical LLM trained on synthetic notes as a shareable substitute for MIMIC |
 | MEDITRON-70B (2023) | [arXiv](https://arxiv.org/abs/2311.16079) | [GitHub](https://github.com/epfLLM/meditron) | Open Llama-2-based medical LLM |
 | Polaris (2024) | [arXiv](https://arxiv.org/abs/2403.13313) | [Hippocratic AI](https://hippocraticai.com/polaris-3/) | Multi-LLM stack for safety-focused patient-facing voice conversations |
@@ -190,7 +190,7 @@ Multi-step systems with tool use, planning, and memory that operate on bounded c
 | AMIE (multimodal) (2025) | [arXiv](https://arxiv.org/abs/2505.04653) | [Project page](https://research.google/blog/amie-gains-vision-a-research-ai-agent-for-multi-modal-diagnostic-dialogue/) | Multimodal extension of AMIE for image-grounded clinical consultations |
 | AMIE (management) (2025) | [arXiv](https://arxiv.org/abs/2503.06074) | [Project page](https://research.google/blog/from-diagnosis-to-treatment-advancing-amie-for-longitudinal-disease-management/) | Extension of AMIE for longitudinal disease management with dialogue and treatment-reasoning agents |
 | MAI-DxO (2025) | [arXiv](https://arxiv.org/abs/2506.22405) | — | Sequential-diagnosis multi-agent orchestrator for clinical-pathological case reasoning |
-| TrialGenie (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.04.17.25326033v1) | — | Five-agent system for autonomous clinical-trial protocol design and refinement |
+| TrialGenie / EmulatRx (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.04.17.25326033v1) | — | Five-agent system for autonomous clinical-trial protocol design and refinement (preprint v1 titled "TrialGenie", renamed "EmulatRx" in v2) |
 | DrugGPT (2025) | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-025-01471-z) | — | Knowledge-grounded collaborative agent for clinical drug analysis |
 | Ferber autonomous oncology agent (2025) | [Nature Cancer](https://www.nature.com/articles/s43018-025-00991-6) | [GitHub](https://github.com/Dyke-F/LLM_RAG_Agent) | GPT-4 oncology agent orchestrating imaging, segmentation, ontology, and literature tools |
 | WiseMind (MARiA) (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-026-02559-9) | [GitHub](https://github.com/YWU99u/WiseMind-DDx-Psyc) | Dual-mind agent architecture with a DSM-5 knowledge graph for psychiatric diagnosis |
@@ -233,12 +233,12 @@ Multi-step systems with tool use, planning, and memory that operate on bounded p
 
 | System | Paper | Resource | Notes |
 | --- | --- | --- | --- |
-| AD-AutoGPT (2023) | [PLOS Global Public Health](https://doi.org/10.1371/journal.pgph.0004383) | [GitHub](https://github.com/levyisthebest/AD-AutoGPT) | Autonomous LLM agent scraping disease news and visualizing spatio-temporal infodemiology trends |
 | Epidemic Modeling with Generative Agents (2023) | [arXiv](https://arxiv.org/abs/2307.04986) | [GitHub](https://github.com/bear96/GABM-Epidemic) | Generative agents reproducing quarantine, isolation, and multi-wave epidemic dynamics |
 | Human-AI Evidence Synthesis (2024) | [Cell Reports Sustainability](https://doi.org/10.1016/j.crsus.2024.100132) | [GitHub](https://github.com/s-spillias/GPT-Screening) | Tool-using LLM workflow for evidence-synthesis screening in public-health reviews |
 | LLM Data Extraction for Evidence Synthesis (2024) | [Research Synthesis Methods](https://doi.org/10.1002/jrsm.1710) | — | LLM-as-extractor agent for public-health evidence synthesis at scale |
 | LLMs for AMR Policy Development (2024) | [Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.4c07842) | [Project page](http://www.liuhuibot.com/amrpolicy) | RAG-based agent integrating multisectoral antimicrobial-resistance policy documents |
 | Epidemic Information Extraction with LLMs (2024) | [arXiv](https://arxiv.org/abs/2408.14277) | — | LLM-ensemble extractor producing structured outbreak signals from ProMED and WHO outbreak reports |
+| AD-AutoGPT (2025) | [PLOS Global Public Health](https://doi.org/10.1371/journal.pgph.0004383) | [GitHub](https://github.com/levyisthebest/AD-AutoGPT) | Autonomous LLM agent scraping disease news and visualizing spatio-temporal infodemiology trends |
 | BEACON (2025) | [Journal of Infectious Diseases](https://doi.org/10.1093/infdis/jiaf642) | [Project page](https://beaconbio.org/) | Event-based surveillance pairing a domain-adapted LLM agent with analyst-in-the-loop review |
 | LLM Agentic Framework for Cholera Risk (2025) | [Springer LNCS](https://doi.org/10.1007/978-3-032-11733-5_31) | — | LLM agent reasoning over feature-importance and regression artifacts for cholera-risk policy guidance |
 | AI-VaxGuide (2025) | [arXiv](https://arxiv.org/abs/2507.03493) | [HF](https://huggingface.co/VaxGuide) | Agentic RAG over immunization protocols for point-of-care vaccination guidance |
