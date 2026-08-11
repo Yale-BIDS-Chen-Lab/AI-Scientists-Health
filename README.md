@@ -1,247 +1,94 @@
-# AI-Scientists-Health
+# AI Scientists in Health
 
-This repository is a public, regularly updated companion to the 2026 paper *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward*. **AI Scientists** are systems that pursue scientific questions through multi-stage, sustained, and self-evolving inquiry: generating hypotheses, designing and running evaluations, interpreting results, and refining research directions. This paradigm is especially consequential in health, where heterogeneous data, stringent evidence requirements, and demanding governance make trustworthy deployment hard.
+This is the official repository for the 2026 Perspective *From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward*. It provides an evidence-oriented map of systems participating in scientific inquiry, comparing their objectives, human–AI division of work across four recurring research functions, and reported evaluation.
 
-To situate AI Scientists within their technical lineage, the repository also includes **selected** LLMs and AI Agents. It is **not** an exhaustive catalog of health-related LLMs or agents, but a focused, evolving curation of the systems most relevant to the emerging AI Scientist paradigm. Entries are organized along two axes: three paradigms (**LLMs**, **AI Agents**, **AI Scientists**) and three health subdomains (**Biomedical**, **Clinical**, **Public Health**).
+## AI Scientist research patterns
 
+**System and objective** identifies the scientific problem a system was designed to address and the primary output it is intended to produce.
 
-## The three paradigms and how entries are categorized
+**Functional workflow** maps the reported contributions of AI and human investigators across four recurring research functions:
 
-These paradigms form a technical lineage: **LLMs** provide the reasoning substrate, **AI Agents** add tools and planning for bounded tasks, and **AI Scientists** sustain inquiry across a research trajectory. Each entry is placed in exactly one cell based on the following criteria:
+1. **Grounding and formulation** links existing evidence, data, or researcher input to questions, hypotheses, or candidate directions.
+2. **Design and execution** specifies and performs computational analyses, simulations, or physical experiments.
+3. **Analysis and interpretation** assesses results, statistical evidence, biological meaning, and uncertainty.
+4. **Iteration and adaptation** uses findings or feedback to revise subsequent analyses, experiments, hypotheses, or search directions.
 
-- **LLM**: A generative model pretrained on large text corpora and adapted through fine-tuning, providing broad language and reasoning capability.
-- **AI Agent**: A system that extends an LLM with memory, tool use, planning, and action modules to interact with external environments over multiple steps, typically oriented toward bounded task completion, such as solving a defined problem or executing a specified workflow.
-- **AI Scientist**: A system that pursues scientific questions by generating, evaluating, and refining evidence across extended research cycles. Where agents complete tasks, AI Scientists conduct science: formulating questions, designing analyses or experiments, interpreting intermediate findings, and updating research directions based on what they learn.
+These functions may connect sequentially, recur iteratively, or operate in parallel. Responsibility may also shift between AI and human investigators during the same study.
 
-The table summarizes how the three paradigms differ across these properties:
+**Reported evaluation** summarizes how the original study assessed its outputs or claims, such as through computational benchmarks, expert review, retrospective or prospective data, independent replication, or wet-lab experiments. It records the evidence reported by each paper rather than assigning a common quality score.
 
-| Dimension | LLM | AI Agent | AI Scientist |
-| --- | --- | --- | --- |
-| Scope | Single response | Bounded task | End-to-end research cycle |
-| (i) Multi-stage across the research cycle | No | No (bounded) | Yes |
-| (ii) Persistent memory across sessions | No | No (within-task) | Yes |
-| (iii) Self-evolving | No | Yes/No | Yes |
-| (iv) Knowledge access and tool use | No | Yes | Yes |
-| Judged by | Response quality | Task completion | Novelty, rigor, reproducibility |
+## Representative systems
 
-## Table of Contents
-- [Biomedical](#biomedical) (preclinical discovery: drug discovery, omics, protein and molecule modeling, biomedical literature)
-  - [Biomedical LLMs](#biomedical-llms)
-  - [Biomedical AI Agents](#biomedical-ai-agents)
-  - [Biomedical AI Scientists](#biomedical-ai-scientists)
-- [Clinical](#clinical) (clinical research and healthcare delivery: diagnosis, treatment, EHR, trials, clinical imaging)
-  - [Clinical LLMs](#clinical-llms)
-  - [Clinical AI Agents](#clinical-ai-agents)
-  - [Clinical AI Scientists](#clinical-ai-scientists)
-- [Public Health](#public-health) (population-level health: epidemiology, surveillance, outbreak intelligence, digital epidemiology)
-  - [Public Health LLMs](#public-health-llms)
-  - [Public Health AI Agents](#public-health-ai-agents)
-  - [Public Health AI Scientists](#public-health-ai-scientists)
+The evidence map begins with the peer-reviewed systems compared in the current manuscript and extends them with newly audited health-domain systems. Emerging preprints are listed separately from peer-reviewed work. Systems are assigned by their primary demonstrated application, although some cross domain boundaries. **AI** and **Human** labels describe reported contributions, not relative importance.
 
+### General scientific and AI/ML research
 
----
+These systems provide broader context for agentic scientific workflows but were not demonstrated primarily on health research.
 
-## Biomedical
+| System and objective | Grounding and formulation | Design and execution | Analysis and interpretation | Iteration and adaptation | Reported evaluation |
+| --- | --- | --- | --- | --- | --- |
+| **The AI Scientist** (2026, *Nature*)<br>End-to-end machine-learning studies<br>[Paper](https://doi.org/10.1038/s41586-026-10265-5) · [Code](https://github.com/SakanaAI/AI-Scientist-v2) | **Human:** specifies the research subfield.<br>**AI:** generates ideas and searches the literature. | **Human:** provides starting code in template-based mode.<br>**AI:** modifies or generates code and executes experiments. | **AI:** produces results and figures and writes the manuscript. | **AI:** uses outcomes to guide later experiments or search nodes. | Automated-review benchmark and blind workshop review of three selected manuscripts; one passed the first review round. |
+| **ERA** (2026, *Nature*)<br>Empirical scientific-software optimization<br>[Paper](https://doi.org/10.1038/s41586-026-10658-6) · [Code](https://github.com/google-research/era) | **Human:** defines the task and metric.<br>**AI:** derives and recombines ideas from the literature. | **AI:** generates and runs code in a sandbox. | **AI:** scores outputs against the metric.<br>**Human:** checks selected implementations for fidelity. | **AI:** mutates, branches, and backtracks based on scores. | Six scientific benchmarks with held-out or public comparisons. |
+| **Agentomics** (2026, *Bioinformatics*)<br>Biomedical machine-learning model development<br>[Paper](https://doi.org/10.1093/bioinformatics/btag250) · [Code](https://github.com/BioGeMT/Agentomics-ML) | **Human:** supplies a dataset, metric, and resource limits.<br>**AI:** formulates modeling strategies. | **AI:** builds and runs models through validated development steps. | **AI:** selects by validation score and evaluates the selected model on an isolated test set. | **AI:** revises and recombines strategies using prior results. | Triplicate runs on 20 benchmarks; best-of-three produced a new reported state of the art on 11/20 datasets (19/60 runs). |
 
-Preclinical and basic biomedical discovery, upstream of patient care: drug discovery, omics, protein and molecule modeling, and biomedical literature. Systems here operate on molecular, cellular, and laboratory data.
+### Preclinical biomedical research
 
-### Biomedical LLMs
-Biomedical language models, including text-based models and multimodal models in which natural language is a primary modality (e.g., text-and-molecule, text-and-DNA, and text-and-protein hybrids).
+These systems support biomedical discovery before or alongside clinical testing, including hypothesis development, molecular design, experimental analysis, and evidence synthesis.
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| BioGPT (2022) | [Briefings in Bioinformatics](https://doi.org/10.1093/bib/bbac409) | [GitHub](https://github.com/microsoft/BioGPT) | Generative biomedical LLM pretrained on PubMed |
-| Galactica (2022) | [arXiv](https://arxiv.org/abs/2211.09085) | [GitHub](https://github.com/paperswithcode/galai) | LLM trained on a curated scientific corpus with SMILES, amino-acid, and LaTeX tokens |
-| BioMedGPT (2023) | [arXiv](https://arxiv.org/abs/2308.09442) | [GitHub](https://github.com/PharMolix/OpenBioMed) | Multimodal biomedical LLM unifying molecule, protein, and natural-language inputs |
-| Mol-Instructions (2024) | [ICLR](https://arxiv.org/abs/2306.08018) | [GitHub](https://github.com/zjunlp/Mol-Instructions) | LLaMA-tuned models on a biomolecular instruction dataset spanning molecule, protein, and biomolecule-text tasks |
-| ChemLLM (2024) | [arXiv](https://arxiv.org/abs/2402.06852) | [HF](https://huggingface.co/AI4Chem/ChemLLM-7B-Chat) | Chemistry-specific LLM with ChemData instruction tuning |
-| BioMistral (2024) | [ACL Findings](https://aclanthology.org/2024.findings-acl.348/) | [GitHub](https://github.com/BioMistral/BioMistral) | Mistral-7B continually pretrained on PubMed Central with multilingual biomedical evaluation |
-| BioMedLM (2024) | [arXiv](https://arxiv.org/abs/2403.18421) | [GitHub](https://github.com/stanford-crfm/BioMedLM) | Compact GPT trained from scratch on PubMed |
-| ChatNT (2024) | [bioRxiv](https://doi.org/10.1101/2024.04.30.591835) | [GitHub](https://github.com/instadeepai/nucleotide-transformer) | Conversational nucleic-acid foundation model controlled by natural-language prompts across genomics tasks |
-| Tx-LLM (2024) | [arXiv](https://arxiv.org/abs/2406.06316) | — | PaLM-2-tuned LLM jointly handling text and molecular, protein, and disease entities for therapeutic-development tasks |
-| MAMMAL (2024) | [arXiv](https://arxiv.org/abs/2410.22367) | [GitHub](https://github.com/BiomedSciAI/biomed-multi-alignment) | Text-instructed multimodal foundation model unifying protein, small-molecule, and single-cell modalities for drug discovery |
-| DrugGen (2024) | [arXiv](https://arxiv.org/abs/2411.14157) | [GitHub](https://github.com/mahsasheikh/DrugGen) | RL-tuned LLM for target-conditioned SMILES generation with ADMET-aware decoding |
-| NatureLM (2025) | [arXiv](https://arxiv.org/abs/2502.07527) | [GitHub](https://github.com/microsoft/SFM) | Sequence LM unifying small molecules, proteins, DNA, RNA, and materials, controllable via text instructions |
-| BindGPT (2025) | [AAAI](https://arxiv.org/abs/2406.03686) | [Project page](https://bindgpt.github.io/) | GPT-style LM for pocket-conditioned 3D ligand generation with RL fine-tuning |
-| TxGemma (2025) | [arXiv](https://arxiv.org/abs/2504.06196) | [Project page](https://developers.google.com/health-ai-developer-foundations/txgemma) | Gemma-based open models specialized for therapeutic-discovery tasks |
-| BioReason (2025) | [arXiv](https://arxiv.org/abs/2505.23579) | [GitHub](https://github.com/bowang-lab/BioReason) | DNA-LLM with RL-based reasoning training for variant-effect and pathway prediction |
-| BioReason-Pro (2026) | [bioRxiv](https://www.biorxiv.org/content/10.64898/2026.03.19.712954v1) | [GitHub](https://github.com/bowang-lab/BioReason-Pro) | Multimodal reasoning LLM coupling a Qwen backbone with ESM3 and a GO graph for protein function prediction |
+| System and objective | Grounding and formulation | Design and execution | Analysis and interpretation | Iteration and adaptation | Reported evaluation |
+| --- | --- | --- | --- | --- | --- |
+| **Virtual Lab** (2025, *Nature*)<br>SARS-CoV-2 nanobody design<br>[Paper](https://doi.org/10.1038/s41586-025-09442-9) · [Code](https://github.com/zou-group/virtual_lab) | **Human:** defines the project and writes meeting agendas.<br>**AI:** selects the design approach and tools. | **AI:** implements the ESM–AlphaFold–Rosetta pipeline.<br>**Human:** runs code and ELISA experiments. | **AI:** combines model scores to rank candidates. | **AI:** uses top-ranked mutants to seed four computational design rounds. | ELISA testing of 92 mutants, with two candidates highlighted. |
+| **AI Co-Scientist** (2026, *Nature*)<br>Hypothesis generation and prioritization<br>[Paper](https://doi.org/10.1038/s41586-026-10644-y) · [Project](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/) | **Human:** specifies the goal and constraints.<br>**AI:** generates literature-grounded hypotheses. | **AI:** proposes experimental plans.<br>**Human:** selects and performs wet-lab tests. | **Human:** interprets experimental results. | **AI:** refines hypotheses through debate and ranking feedback. | Expert ratings and expert-selected wet-lab follow-up. |
+| **Robin** (2026, *Nature*)<br>Dry age-related macular degeneration drug discovery<br>[Paper](https://doi.org/10.1038/s41586-026-10652-y) · [Code](https://github.com/Future-House/robin) | **Human:** defines the disease objective.<br>**AI:** synthesizes literature and prioritizes candidates. | **AI:** proposes assays and candidates.<br>**Human:** modifies assays and runs experiments. | **AI:** analyzes assay and RNA-seq data.<br>**Human:** performs reference analyses. | **AI:** uses experimental results to guide follow-up assays and a second candidate round. | Primary-cell replication and a same-assay Deep Research comparator. |
+| **CellVoyager** (2026, *Nature Methods*)<br>Single-cell RNA-sequencing exploration<br>[Paper](https://doi.org/10.1038/s41592-026-03029-6) · [Code](https://github.com/zou-group/CellVoyager) | **Human:** supplies research context and data.<br>**AI:** generates literature-informed hypotheses and plans. | **AI:** writes and executes notebook analyses. | **AI:** interprets results.<br>**Human:** reviews case-study analyses. | **AI:** replans from results and post-analysis expert feedback. | CellBench (76 studies), three expert-rated cases, and selected replication in independent datasets. |
+| **Biomni** (2026, *Science*)<br>General biomedical task execution<br>[Paper](https://doi.org/10.1126/science.adz4351) · [Code](https://github.com/snap-stanford/biomni) | **Human:** submits a query.<br>**AI:** retrieves tools and databases and generates a plan. | **AI:** executes code and tools and generates laboratory-automation protocols.<br>**Human:** performs the cloning experiment. | **AI:** synthesizes tool outputs into an answer or report. | **AI:** replans from observations across three protein-design cycles. | A 443-query benchmark and five biomedical case studies. |
+| **DeepEvidence** (2026, *Nature Machine Intelligence*)<br>Biomedical evidence exploration and synthesis<br>[Paper](https://doi.org/10.1038/s42256-026-01266-0) · [Code](https://github.com/RyanWangZf/BioDSA/tree/main/biodsa/agents/deepevidence) | **Human:** supplies a research question.<br>**AI:** searches 17 biomedical sources and builds an evidence graph. | **AI:** plans breadth- and depth-oriented searches and executes database queries and code. | **AI:** synthesizes evidence with provenance.<br>**Human:** rates selected open-ended outputs. | **AI:** expands and refines searches and the evidence graph. | Four open benchmarks, curated biomedical tasks, and expert-rated open-ended challenges. |
+| **DiscoVerse** (2026, *Frontiers in Artificial Intelligence*)<br>Pharmaceutical archive search and reverse translation<br>[Paper](https://doi.org/10.3389/frai.2026.1808378) | **Human:** defines archival questions and output schemas.<br>**AI:** decomposes queries and retrieves evidence. | **AI:** searches and extracts from preclinical, clinical, and strategic records. | **AI:** produces source-linked syntheses.<br>**Human:** adjudicates context and meaning. | **AI:** refines retrieval when review agents identify evidence gaps. | Seven expert-labelled questions over records for 180 molecules (recall ≥0.986; precision 0.71–0.91) and three retrospective use cases. |
+| **GenExp** (2026, *Journal of the Royal Society Interface*)<br>Systems-biology hypothesis testing<br>[Paper](https://doi.org/10.1098/rsif.2026.0043) · [Code](https://github.com/DanielBrunnsaker/GenExp) | **Human:** defines the scope.<br>**AI:** generates and prioritizes structured hypotheses. | **AI:** designs protocols and laboratory automation executes them.<br>**Human:** reviews safety and performs remaining physical steps. | **AI:** analyzes growth and metabolomics data.<br>**Human:** interprets the scientific findings. | **AI:** uses one experiment's metabolomics results to generate and test a follow-up hypothesis. | Controlled yeast experiments with negative controls and up to ten biological replicates per condition; 976 metabolomics injections, including 336 study-quality-control injections. |
+| **MacAma** (2026, *Smart Medicine*)<br>Systematic review and meta-analysis<br>[Paper](https://doi.org/10.1002/smmd.70045) · [Code](https://github.com/YilinYuan/MacAma) | **Human:** defines the question, search, and PICOS criteria.<br>**AI:** retrieves and screens studies. | **AI:** extracts structured text and runs analysis on verified inputs.<br>**Human:** verifies chart data and selects statistical parameters. | **AI:** summarizes analyses and drafts text.<br>**Human:** interprets heterogeneity and revises the manuscript. | **Human:** inspects, revises, or overrides agent decisions. | Human-reference screening benchmarks (354 and 599 records; initial-screen recall 56.6%) and one 5,598-record case study. |
 
-### Biomedical AI Agents
-Multi-step systems with tool use, planning, and memory that operate on bounded biomedical research tasks (e.g., drug discovery, omics analysis, protein and molecule design, and biomedical literature).
+### Clinical research
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| ChemCrow (2023) | [Nature Machine Intelligence](https://doi.org/10.1038/s42256-024-00832-8) | [GitHub](https://github.com/ur-whitelab/chemcrow-public) | LLM agent equipped with chemistry tools for organic synthesis planning |
-| Coscientist (Boiko) (2023) | [Nature](https://doi.org/10.1038/s41586-023-06792-0) | [GitHub](https://github.com/gomesgroup/coscientist) | GPT-4 agent that plans, codes, and runs chemistry experiments on a robotic platform |
-| BioPlanner (2023) | [arXiv](https://arxiv.org/abs/2310.10632) | [GitHub](https://github.com/bioplanner/bioplanner) | LLM agent converting natural-language biology protocols into evaluable pseudocode |
-| GeneGPT (2024) | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btae075) | [GitHub](https://github.com/ncbi/GeneGPT) | Tool-augmented LLM calling BLAST, Gene, dbSNP, and OMIM APIs to answer genomics questions |
-| ProtAgents (2024) | [Digital Discovery](https://doi.org/10.1039/D4DD00013G) | [GitHub](https://github.com/lamm-mit/ProtAgents) | Multi-agent system for de novo protein design combining MD and physics simulators with LLM planners |
-| CRISPR-GPT (2024) | [arXiv](https://arxiv.org/abs/2404.18021) | [GitHub](https://github.com/cong-lab/crispr-gpt-pub) | Tool-augmented agent for gRNA design and protocol selection across CRISPR editing systems |
-| GeneAgent (2024) | [arXiv](https://arxiv.org/abs/2405.16205) | [GitHub](https://github.com/ncbi-nlp/GeneAgent) | Self-verification agent grounding gene-set claims via database APIs |
-| BioDiscoveryAgent (2024) | [arXiv](https://arxiv.org/abs/2405.17631) | [GitHub](https://github.com/snap-stanford/BioDiscoveryAgent) | LLM agent for iterative selection of CRISPR perturbation experiments |
-| AutoBA (2024) | [Advanced Science](https://doi.org/10.1002/advs.202407094) | [GitHub](https://github.com/JoshuaChou2018/AutoBA) | End-to-end agent proposing, coding, and repairing bioinformatics pipelines from natural-language goals |
-| CellAgent (2024) | [arXiv](https://arxiv.org/abs/2407.09811) | [GitHub](https://github.com/lsq2wal/CellAgent) | Planner-Executor-Evaluator agent for scRNA-seq analysis |
-| DrugAgent (2024) | [arXiv](https://arxiv.org/abs/2408.13378) | — | Multi-agent system combining ML, knowledge-graph, and search agents for drug-target interaction and repurposing |
-| PaperQA2 (2024) | [arXiv](https://arxiv.org/abs/2409.13740) | [GitHub](https://github.com/Future-House/paper-qa) | RAG agent decomposing scientific-literature QA into search, summarize, and answer-revision tools |
-| AtomAgents (2025) | [PNAS](https://doi.org/10.1073/pnas.2414074122) | [GitHub](https://github.com/lamm-mit/AtomAgents) | Multi-agent system coupling LLMs to physics simulators for materials and biomaterials design |
-| BioMaster (2025) | [bioRxiv](https://doi.org/10.1101/2025.01.23.634608) | [GitHub](https://github.com/ai4nucleome/BioMaster) | Role-based multi-agent RAG system automating RNA-seq, ChIP-seq, scRNA-seq, and Hi-C workflows |
-| AutoProteinEngine (2025) | [COLING Industry](https://aclanthology.org/2025.coling-industry.36/) | [GitHub](https://github.com/tsynbio/AutoPE) | LLM agent automating protein-engineering AutoML pipelines via tool calling |
-| LIDDiA (2025) | [arXiv](https://arxiv.org/abs/2502.13959) | [GitHub](https://github.com/ninglab/LIDDiA) | Reasoner-Executor-Evaluator-Memory agent for in-silico drug discovery |
-| PharmAgents (2025) | [arXiv](https://arxiv.org/abs/2503.22164) | — | Multi-agent system covering target discovery, lead identification, optimization, and preclinical evaluation in silico |
-| ESCARGOT (2025) | [Bioinformatics](https://doi.org/10.1093/bioinformatics/btaf031) | [GitHub](https://github.com/EpistasisLab/ESCARGOT) | Graph-of-Thoughts agent over biomedical knowledge graphs for multi-hop reasoning |
-| Biomni (2025) | [bioRxiv](https://doi.org/10.1101/2025.05.30.656746) | [GitHub](https://github.com/snap-stanford/Biomni) | General-purpose biomedical agent integrating broad tool and database access across biomedical research tasks |
-| GenoMAS (2025) | [arXiv](https://arxiv.org/abs/2507.21035) | [GitHub](https://github.com/Liu-Hy/GenoMAS) | Six-agent code-driven framework for gene-expression analysis |
-| BioMARS (2025) | [arXiv](https://arxiv.org/abs/2507.01485) | [GitHub](https://github.com/AlexandreQ27/BioMARS) | LLM, VLM, and robotics platform with Biologist, Technician, and Inspector agents for autonomous cell-culture experiments |
+These systems investigate clinical questions using patient-derived data, pathology, electronic health records, or trial-design evidence.
 
-### Biomedical AI Scientists
-Systems demonstrated on biomedical research that satisfy all four AI Scientist properties: multi-stage with varying autonomy, sustained and persistent, self-evolving, and knowledge-accessing and tool-using.
+| System and objective | Grounding and formulation | Design and execution | Analysis and interpretation | Iteration and adaptation | Reported evaluation |
+| --- | --- | --- | --- | --- | --- |
+| **SPARK** (2026, *Nature Medicine*)<br>Cancer-pathology biomarker discovery<br>[Paper](https://doi.org/10.1038/s41591-026-04357-y) · [Code](https://github.com/cpath-ukk/SPARK) | **Human:** specifies the task and available data.<br>**AI:** generates and refines biological concepts. | **AI:** converts concepts to code and runs cohort analyses. | **AI:** verifies parameters and performs statistical analyses.<br>**Human:** reviews selected findings. | **AI:** repairs code but does not redirect research using empirical results. | Eighteen retrospective cohorts (>5,400 patients; five cancers), with false-discovery-rate control and independent test cohorts. |
+| **EmulatRx** (2026, *Nature Communications*)<br>Real-world-evidence-informed clinical trial design<br>[Paper](https://doi.org/10.1038/s41467-026-74501-2) · [Code](https://github.com/TrialLab/EmulatRx) | **Human:** defines the trial question and provides expert feedback.<br>**AI:** retrieves trials and literature and drafts a protocol. | **AI:** maps criteria to EHR data, constructs cohorts, and runs causal analyses. | **AI:** generates trial-design reports.<br>**Human and AI:** review clinical and methodological plausibility. | **AI:** revises criteria, covariates, or analyses when missingness, sparsity, or imbalance is detected. | Twenty trial protocols with manual reference labels, SQL review, synthetic causal ground truth, and retrospective EHR and published-trial comparisons. |
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| BioResearcher (2024) | [arXiv](https://arxiv.org/abs/2412.09429) | [GitHub](https://github.com/XMUDM/BioResearcher) | Hierarchical multi-agent system for dry-lab biomedical research with iterative refinement across search, literature, design, and programming |
-| AI Co-Scientist (2025) | [arXiv](https://arxiv.org/abs/2502.18864) | [Project page](https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/) | Multi-agent generate-debate-evolve system with Elo-tournament hypothesis evolution for biomedical research |
-| Robin (2025) | [Nature](https://doi.org/10.1038/s41586-026-10652-y) | [GitHub](https://github.com/Future-House/robin) | Three-agent lab-in-the-loop system for therapeutic-candidate discovery |
-| CellVoyager (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.03.657517) | [GitHub](https://github.com/zou-group/CellVoyager) | Autonomous agent reading scRNA-seq papers, running live-coded analyses, and iteratively revising hypotheses |
-| STELLA (2025) | [arXiv](https://arxiv.org/abs/2507.02004) | [GitHub](https://github.com/zaixizhang/STELLA) | Self-evolving biomedical agent with a persistent Template Library and a dynamic Tool Ocean |
-| GenExp (2025) | [bioRxiv](https://doi.org/10.1101/2025.06.24.661378) | [GitHub](https://github.com/DanielBrunnsaker/GenExp) | Multi-agent platform for closed-loop yeast systems biology, extending the Adam and Eve robot-scientist line |
-| NeuroDISK (2025) | [bioRxiv](https://doi.org/10.1101/2025.02.14.638360) | [Project page](https://knowledgecaptureanddiscovery.github.io/NeuroDISK/) | Continuous inquiry-driven discovery system over neuroimaging-genetics data |
-| OmniCellAgent (2025) | [bioRxiv](https://doi.org/10.1101/2025.07.31.667797) | [GitHub](https://github.com/FuhaiLiAiLab/OmniCellAgent) | Co-scientist for single-cell precision-medicine discovery loops |
-| BioLab (2025) | [bioRxiv](https://doi.org/10.1101/2025.09.03.674085) | [Project page](https://xtrimo.en.biomap.com/) | Eight-agent Planner-Reasoner-Critic-Memory system orchestrating biomolecular tools for antibody and biomolecule design |
-| Virtual Lab (2025) | [Nature](https://doi.org/10.1038/s41586-025-09442-9) | [GitHub](https://github.com/zou-group/virtual-lab) | LLM principal-investigator dynamically instantiating a scientist team for biomolecule design |
-| ASCollab (2025) | [arXiv](https://arxiv.org/abs/2510.08619) | — | Heterogeneous research agents in self-evolving collaboration networks for cancer-omics discovery |
-| Kosmos (2025) | [arXiv](https://arxiv.org/abs/2511.02824) | [Project page](https://edisonscientific.com/) | Long-horizon autonomous research campaigns coordinated by a structured world model |
-| SAGA (2025) | [arXiv](https://arxiv.org/abs/2512.21782) | [GitHub](https://github.com/btyu/SAGA) | Bi-level architecture that evolves objective functions themselves for biomolecule design |
-| BioMedAgent (2026) | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-026-01634-6) | [GitHub](https://github.com/BOBQWERA/BioMedAgent) | Self-evolving multi-agent framework for autonomous biomedical data analysis that learns tool selection from documentation and generates custom code when no suitable tool exists |
-| AutoScientists (2026) | [arXiv](https://arxiv.org/abs/2605.28655) | [GitHub](https://github.com/mims-harvard/AutoScientists) | Decentralized multi-agent system for long-running scientific experimentation in which agent teams self-organize around hypotheses and share successes and failures to redirect the search |
+### Population health
 
----
+These systems address population-level evidence synthesis, disease modeling, or forecasting. The strongest current evidence comes from prospective forecasting and expert-grounded evidence-synthesis evaluation; the second and third entries below are preprints and should be interpreted accordingly.
 
-## Clinical
+| System and objective | Grounding and formulation | Design and execution | Analysis and interpretation | Iteration and adaptation | Reported evaluation |
+| --- | --- | --- | --- | --- | --- |
+| **Martinson et al.** (2026, preprint)<br>Prospective multi-pathogen forecasting<br>[Paper](https://arxiv.org/abs/2605.16238) · [Code](https://github.com/google-research/google-research/tree/master/epi_forecasts) | **Human:** defines the forecasting task and seeds method descriptions.<br>**AI:** formulates and combines forecasting approaches. | **AI:** generates and evaluates more than 207,500 candidate models. | **AI:** scores validation and retrospective test performance.<br>**Human:** selects a diverse internal pool and 19 ensemble components. | **AI:** uses scores to branch, revise, and recombine model code. | Time-stamped prospective submissions to CDC forecasting hubs for influenza, COVID-19, and RSV. |
+| **AgentSLR** (2026, preprint)<br>Epidemiological systematic-review workflow<br>[Paper](https://arxiv.org/abs/2603.22327) | **Human:** defines review questions, criteria, and reference annotations.<br>**AI:** retrieves candidate studies. | **AI:** screens articles, converts PDFs, and extracts structured evidence. | **AI:** creates correctable structured records.<br>**Human:** reviews outputs; final report synthesis was not evaluated. | **Not demonstrated:** the workflow uses fixed stages; human abstract screening improves evidence retention. | Stage-isolated evaluation on 16,248 expert-annotated records; no model exceeded average field-level extraction F1 of 0.67. |
+| **EPIAGENT** (2026, preprint)<br>Epidemiological simulator synthesis<br>[Paper](https://arxiv.org/abs/2602.00299) | **Human:** supplies scenarios, data, constraints, and an execution scaffold.<br>**AI:** retrieves epidemiological knowledge and builds flow graphs. | **AI:** generates, calibrates, and runs mechanistic simulators. | **AI:** checks structural, numerical, and scenario consistency. | **AI:** revises graphs and code from verification and performance feedback. | Structural ablations, retrospective COVID-19 calibration, and scenario-consistency tests; no prospective forecast evaluation. |
 
-Clinical research and healthcare delivery at the level of the individual patient: diagnosis, treatment, EHR analysis, clinical trials, and medical imaging.
+## Interpreting the evidence
 
-### Clinical LLMs
-Clinical and medical language models targeting clinical and medical tasks (e.g., clinical NLP, EHR, diagnostic reasoning, clinical QA, and medical imaging).
+Current systems demonstrate that AI can contribute to multiple connected parts of scientific inquiry. Several systems link computational reasoning with laboratory experiments, retrospective cohorts, independent datasets, or externally scored benchmarks.
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| ChatDoctor (2023) | [arXiv](https://arxiv.org/abs/2303.14070) | [GitHub](https://github.com/Kent0n-Li/ChatDoctor) | LLaMA fine-tuned on patient-doctor dialogue for clinical chat |
-| MedAlpaca (2023) | [arXiv](https://arxiv.org/abs/2304.08247) | [GitHub](https://github.com/kbressem/medAlpaca) | Instruction-tuned medical LLaMA |
-| HuatuoGPT (2023) | [Findings of EMNLP](https://aclanthology.org/2023.findings-emnlp.725/) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT) | Chinese-language clinical chat LLM combining distilled and real doctor data |
-| Clinical Camel (2023) | [arXiv](https://arxiv.org/abs/2305.12031) | [GitHub](https://github.com/bowang-lab/clinical-camel) | LLaMA-2 fine-tune for medical question answering |
-| Med-PaLM (2023) | [Nature](https://doi.org/10.1038/s41586-023-06291-2) | [Project page](https://sites.research.google/gr/med-palm/) | Medical LLM evaluated on the MultiMedQA suite |
-| Asclepius (2023) | [arXiv](https://arxiv.org/abs/2309.00237) | [GitHub](https://github.com/starmpcc/Asclepius) | Clinical LLM trained on synthetic notes as a shareable substitute for MIMIC |
-| MEDITRON-70B (2023) | [arXiv](https://arxiv.org/abs/2311.16079) | [GitHub](https://github.com/epfLLM/meditron) | Open Llama-2-based medical LLM |
-| Polaris (2024) | [arXiv](https://arxiv.org/abs/2403.13313) | [Hippocratic AI](https://hippocraticai.com/polaris-3/) | Multi-LLM stack for safety-focused patient-facing voice conversations |
-| Me-LLaMA (2024) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01533-1) | [GitHub](https://github.com/BIDS-Xu-Lab/Me-LLaMA) | LLaMA-2 continually pretrained on medical tokens with downstream instruction tuning |
-| Meerkat (2024) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01653-8) | [arXiv](https://arxiv.org/abs/2404.00376) | Compact medical LLM learning reasoning from textbook-derived chain-of-thought for on-premises deployment |
-| BiomedGPT (generalist VLM) (2024) | [Nature Medicine](https://doi.org/10.1038/s41591-024-03185-2) | [GitHub](https://github.com/taokz/BiomedGPT) | Open biomedical vision-language foundation model spanning clinical tasks |
-| Med-PaLM M (2024) | [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIoa2300138) | [Project page](https://sites.research.google/med-palm/) | Multimodal Med-PaLM unifying text, imaging, and genomics on a PaLM-E backbone |
-| BiMediX (2024) | [arXiv](https://arxiv.org/abs/2402.13253) | [GitHub](https://github.com/mbzuai-oryx/BiMediX) | Arabic-English mixture-of-experts medical LLM on Mixtral-8x7B |
-| Apollo (2024) | [arXiv](https://arxiv.org/abs/2403.03640) | [GitHub](https://github.com/FreedomIntelligence/Apollo) | Multilingual medical LLM across six widely spoken languages |
-| HuatuoGPT-Vision (2024) | [arXiv](https://arxiv.org/abs/2406.19280) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT-Vision) | Medical multimodal LLM trained on PubMedVision image-QA pairs |
-| UltraMedical (2024) | [arXiv](https://arxiv.org/abs/2406.03949) | [GitHub](https://github.com/TsinghuaC3I/UltraMedical) | Llama-3 medical LLM trained on mixed synthetic and manual biomedical instructions with DPO |
-| PathChat (2024) | [Nature](https://doi.org/10.1038/s41586-024-07618-3) | [GitHub](https://github.com/fedshyvana/pathology_mllm_training) | Vision-language pathology copilot fine-tuned on visual-language instructions |
-| BiMediX2 (2024) | [arXiv](https://arxiv.org/abs/2412.07769) | [GitHub](https://github.com/mbzuai-oryx/BiMediX2) | Bilingual Arabic-English medical multimodal LLM on a Llama-3.1 backbone covering text and medical imaging |
-| HuatuoGPT-o1 (2024) | [arXiv](https://arxiv.org/abs/2412.18925) | [GitHub](https://github.com/FreedomIntelligence/HuatuoGPT-o1) | Chinese-English medical reasoning LLM trained with verifier-guided SFT and PPO |
-| MedFound (2025) | [Nature Medicine](https://www.nature.com/articles/s41591-025-03520-1) | [GitHub](https://github.com/medfound/medfound) | Medical LLM with self-bootstrapped diagnostic reasoning across specialties |
-| Med-PaLM 2 (2025) | [Nature Medicine](https://doi.org/10.1038/s41591-024-03423-7) | [Project page](https://sites.research.google/gr/med-palm/) | Medical LLM extending Med-PaLM for medical question answering |
-| Baichuan-M1 (2025) | [arXiv](https://arxiv.org/abs/2502.12671) | [GitHub](https://github.com/baichuan-inc/Baichuan-M1-14B) | Chinese-English medical LLM trained from scratch with an explicit medical curriculum |
-| Preferred-MedLLM-Qwen-72B (2025) | [arXiv](https://arxiv.org/abs/2504.18080) | [HF](https://huggingface.co/pfnet/Preferred-MedLLM-Qwen-72B) | Qwen-2.5 with continued Japanese medical pretraining and reasoning preference optimization |
-| Lingshu (2025) | [arXiv](https://arxiv.org/abs/2506.07044) | [GitHub](https://github.com/alibaba-damo-academy/lingshu) | Qwen2.5-VL-based generalist medical multimodal LLM covering multiple imaging modalities |
-| AyurParam (2025) | [arXiv](https://arxiv.org/abs/2511.02374) | [Project page](https://bharatgen.com/ayurparam-a-specialized-llm-for-ayurveda/) | Bilingual Hindi-English instruction-tuned LLM specialized for Ayurveda and Indian traditional medicine |
+The evidence also limits stronger conclusions:
 
-### Clinical AI Agents
-Multi-step systems with tool use, planning, and memory that operate on bounded clinical tasks (e.g., clinical reasoning, EHR query, trial matching, and clinical decision support).
+- Current studies support **hybrid human–AI research workflows** more directly than broadly autonomous scientific discovery.
+- Validation of selected candidates or analyses does not establish the reliability of an entire ranking process or research workflow.
+- Retrospective, benchmark, wet-lab, expert, and peer-review evaluations support different claims and should not be treated as interchangeable.
+- Functional breadth alone does not establish scientific rigor, reproducibility, or significance.
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| Almanac (2024) | [NEJM AI](https://ai.nejm.org/doi/abs/10.1056/AIoa2300068) | [GitHub](https://github.com/hiesingerlab/almanac-retrieval) | Clinical RAG system evaluated by clinicians across multiple specialties |
-| AMIE (2024) | [arXiv](https://arxiv.org/abs/2401.05654) | [Project page](https://research.google/blog/amie-a-research-ai-system-for-diagnostic-medical-reasoning-and-conversations/) | Self-play history-taking diagnostic agent for primary-care consultations |
-| MedAgents (2024) | [ACL Findings](https://aclanthology.org/2024.findings-acl.33/) | [GitHub](https://github.com/gersteinlab/MedAgents) | Multi-disciplinary role-play collaboration framework for zero-shot medical reasoning |
-| Agent Hospital (2024) | [arXiv](https://arxiv.org/abs/2405.02957) | [Project page](https://air.tsinghua.edu.cn/en/info/1007/1872.htm) | Simulated-hospital environment where doctor agents self-evolve via virtual patients |
-| TriageAgent (2024) | [Findings of EMNLP](https://aclanthology.org/2024.findings-emnlp.329/) | [GitHub](https://github.com/Lucanyc/TriageAgent) | Multi-agent debate framework for emergency triage decisions |
-| EHRAgent (2024) | [EMNLP](https://arxiv.org/abs/2401.07128) | [GitHub](https://github.com/wshi83/EhrAgent) | Code-generating agent for structured EHR query and reasoning |
-| ClinicalAgent (2024) | [ACM BCB](https://doi.org/10.1145/3698587.3701359) | [GitHub](https://github.com/LeoYML/clinical-agent) | Multi-agent system with role-specialized agents for clinical-trial outcome prediction |
-| MDAgents (2024) | [NeurIPS](https://proceedings.neurips.cc/paper_files/paper/2024/hash/90d1fc07f46e31387978b88e7e057a31-Abstract-Conference.html) | [GitHub](https://github.com/mitmedialab/MDAgents) | Adaptive multi-agent framework that scales collaboration to case complexity |
-| TrialGPT (2024) | [Nature Communications](https://doi.org/10.1038/s41467-024-53081-z) | [GitHub](https://github.com/ncbi-nlp/TrialGPT) | Zero-shot LLM agent for patient-to-trial matching |
-| RadioRAG (2024) | [Radiology: Artificial Intelligence](https://pubs.rsna.org/doi/10.1148/ryai.240476) | [GitHub](https://github.com/tayebiarasteh/RadioRAG) | Online retrieval-augmented agent for radiology question answering |
-| MMedAgent (2024) | [EMNLP Findings](https://aclanthology.org/2024.findings-emnlp.510/) | [GitHub](https://github.com/Wangyixinxin/MMedAgent) | Multimodal medical agent invoking specialized imaging tools for segmentation, classification, and grounding |
-| SurgeryLLM (2024) | [npj Digital Medicine](https://www.nature.com/articles/s41746-024-01391-3) | — | RAG-based framework for surgical decision support grounded in evidence-based guidelines |
-| MMed-RAG (2024) | [arXiv](https://arxiv.org/abs/2410.13085) | [GitHub](https://github.com/richard-peng-xia/MMed-RAG) | Multimodal medical RAG with domain-aware retrieval across imaging modalities |
-| ColaCare (2025) | [WWW](https://arxiv.org/abs/2410.02551) | [GitHub](https://github.com/PKU-AICare/ColaCare) | Multidisciplinary-team-style DoctorAgents combined with a MetaAgent for EHR prediction |
-| Zero-Shot Trial Matching (Wornow) (2025) | [NEJM AI](https://ai.nejm.org/doi/full/10.1056/AIcs2400360) | [GitHub](https://github.com/som-shahlab/clinical_trial_patient_matching) | Zero-shot LLM pipeline for clinical-trial matching |
-| MedRAX (2025) | [ICML](https://arxiv.org/abs/2502.02673) | [GitHub](https://github.com/bowang-lab/MedRAX) | Tool-using chest-X-ray agent integrating segmentation, classification, and VQA |
-| MEDDxAgent (2025) | [ACL](https://arxiv.org/abs/2502.19175) | [GitHub](https://github.com/nec-research/meddxagent) | Modular differential-diagnosis agent with orchestrator, history-taker, and retrieval-strategy modules |
-| MedAgent-Pro (2025) | [arXiv](https://arxiv.org/abs/2503.18968) | [GitHub](https://github.com/jinlab-imvr/MedAgent-Pro) | Evidence-based diagnostic agent combining guideline-RAG planning with multimodal reasoning |
-| AMIE (multimodal) (2025) | [arXiv](https://arxiv.org/abs/2505.04653) | [Project page](https://research.google/blog/amie-gains-vision-a-research-ai-agent-for-multi-modal-diagnostic-dialogue/) | Multimodal extension of AMIE for image-grounded clinical consultations |
-| AMIE (management) (2025) | [arXiv](https://arxiv.org/abs/2503.06074) | [Project page](https://research.google/blog/from-diagnosis-to-treatment-advancing-amie-for-longitudinal-disease-management/) | Extension of AMIE for longitudinal disease management with dialogue and treatment-reasoning agents |
-| MAI-DxO (2025) | [arXiv](https://arxiv.org/abs/2506.22405) | — | Sequential-diagnosis multi-agent orchestrator for clinical-pathological case reasoning |
-| TrialGenie / EmulatRx (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.04.17.25326033v1) | — | Five-agent system for autonomous clinical-trial protocol design and refinement (preprint v1 titled "TrialGenie", renamed "EmulatRx" in v2) |
-| DrugGPT (2025) | [Nature Biomedical Engineering](https://www.nature.com/articles/s41551-025-01471-z) | — | Knowledge-grounded collaborative agent for clinical drug analysis |
-| Ferber autonomous oncology agent (2025) | [Nature Cancer](https://www.nature.com/articles/s43018-025-00991-6) | [GitHub](https://github.com/Dyke-F/LLM_RAG_Agent) | GPT-4 oncology agent orchestrating imaging, segmentation, ontology, and literature tools |
-| WiseMind (MARiA) (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-026-02559-9) | [GitHub](https://github.com/YWU99u/WiseMind-DDx-Psyc) | Dual-mind agent architecture with a DSM-5 knowledge graph for psychiatric diagnosis |
-| COMPOSER-LLM (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01689-w) | [GitHub](https://github.com/NematiLab/COMPOSER-LLM) | Sepsis-prediction system using an LLM to extract context for high-uncertainty cases |
-| PEACH (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-01858-x) | — | Perioperative chatbot integrating institution-specific guidelines as a regulated decision-support tool |
-| EvoMDT (2025) | [npj Digital Medicine](https://www.nature.com/articles/s41746-025-02304-8) | — | Coordinator-mediated multi-cancer MDT system with per-case self-evolution from physician feedback |
-| AgentMD (2025) | [Nature Communications](https://doi.org/10.1038/s41467-025-64430-x) | [GitHub](https://github.com/ncbi-nlp/Clinical-Tool-Learning) | Agent that auto-curates clinical calculators and applies them for patient-level risk prediction |
-| TxAgent (2025) | [arXiv](https://arxiv.org/abs/2503.10970) | [GitHub](https://github.com/mims-harvard/TxAgent) | Tool-using agent integrating broad therapeutic-reasoning tools for personalized treatment |
-| PathAgent (2025) | [arXiv](https://arxiv.org/abs/2511.17052) | — | Training-free whole-slide pathology agent with Navigator, Perceptor, and Executor modules |
-| TeamPath (2025) | [arXiv](https://arxiv.org/abs/2511.17652) | [GitHub](https://github.com/HelloWorldLTY/TeamPath) | Multi-agent pathology copilot for diagnostic image and report reasoning |
+## Contributing and expansion criteria
 
-### Clinical AI Scientists
-Systems that satisfy all four AI Scientist properties and operate on clinical data or in clinical research workflows. This bucket remained empty in early curation rounds because the perspective paper's thesis is that clinical AI Scientists are a near-term gap; the first qualifying systems are now appearing.
+Contributions to expand the evidence map are welcome. A system need not perform all four research functions, but each proposed entry should:
 
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| HealthFlow (2025) | [arXiv](https://arxiv.org/abs/2508.02621) | [GitHub](https://github.com/yhzhu99/HealthFlow) | Self-evolving multi-agent system for autonomous EHR-analysis research with persistent strategy-heuristic memory across sessions |
-| SPARK (2026) | [Nature Medicine](https://www.nature.com/articles/s41591-026-04357-y) | [GitHub](https://github.com/cpath-ukk/SPARK) | Agentic system generating biological hypotheses from histology, instantiating analytical tools, and refining across iterations for cancer prognosis |
-| Medical AI Scientist (2026) | [arXiv](https://arxiv.org/abs/2603.28589) | [Homepage](https://cuhk-aim-group.github.io/Med-AI-Scientist-Homepage/) | Autonomous clinical research framework spanning idea generation, experiment execution, and manuscript drafting, using a clinician-engineer co-reasoning mechanism across three modes of medical scientific autonomy |
+1. cite a primary paper describing participation in at least one substantive research function, rather than only a standalone model, benchmark, review, or care-delivery task;
+2. state the scientific objective and output while distinguishing AI contributions from researcher input, selection, execution, interpretation, and oversight;
+3. summarize the reported evaluation precisely enough to connect the evidence to the system's claims, including negative results and human dependencies when reported;
+4. identify whether the primary evidence is peer-reviewed or a preprint and provide stable paper and official code or project links when available; and
+5. use neutral wording without treating functional breadth as a measure of autonomy, maturity, or scientific quality.
 
----
+Please submit additions or corrections through a pull request following this schema.
 
-## Public Health
+## Citation
 
-Population-level health: epidemiology, surveillance, outbreak intelligence, and digital epidemiology. Systems here reason over whole populations rather than individual patients.
-
-### Public Health LLMs
-Public health language models applied to population-level health (e.g., epidemiology, surveillance, infodemiology, vaccine sentiment, and social determinants of health).
-
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| PandemicLLM (2024) | [Nature Computational Science](https://doi.org/10.1038/s43588-025-00798-6) | [GitHub](https://github.com/miemieyanga/PandemicLLM) | Multimodal LLM for outbreak forecasting as text reasoning over policy, genomic, and spatial signals |
-| SDoH-GPT (2024) | [arXiv](https://arxiv.org/abs/2407.17126) | — | LLM pipeline extracting social determinants of health at population scale |
-| EpiLLM (2025) | [arXiv](https://arxiv.org/abs/2505.12738) | — | Dual-branch LLM aligning case-count and human-mobility tokens for spatio-temporal epidemic forecasting |
-| PH-LLM (Infoveillance) (2025) | [medRxiv](https://www.medrxiv.org/content/10.1101/2025.02.08.25321587v1) | [GitHub](https://github.com/luoyuanlab/PH-LLM) | Open multilingual Qwen-2.5 suite for real-time public-health infoveillance |
-| PandemIQ Llama (2025) | [AAAI](https://doi.org/10.1609/aaai.v40i46.41301) | [GitHub](https://github.com/noc-lab/PandemIQ-Llama) | Llama-3.1 continually pretrained on a curated pandemic corpus for outbreak surveillance |
-
-### Public Health AI Agents
-Multi-step systems with tool use, planning, and memory that operate on bounded public health tasks (e.g., outbreak detection, epidemiological modeling, evidence synthesis, and policy reasoning).
-
-| System | Paper | Resource | Notes |
-| --- | --- | --- | --- |
-| Epidemic Modeling with Generative Agents (2023) | [arXiv](https://arxiv.org/abs/2307.04986) | [GitHub](https://github.com/bear96/GABM-Epidemic) | Generative agents reproducing quarantine, isolation, and multi-wave epidemic dynamics |
-| Human-AI Evidence Synthesis (2024) | [Cell Reports Sustainability](https://doi.org/10.1016/j.crsus.2024.100132) | [GitHub](https://github.com/s-spillias/GPT-Screening) | Tool-using LLM workflow for evidence-synthesis screening in public-health reviews |
-| LLM Data Extraction for Evidence Synthesis (2024) | [Research Synthesis Methods](https://doi.org/10.1002/jrsm.1710) | — | LLM-as-extractor agent for public-health evidence synthesis at scale |
-| LLMs for AMR Policy Development (2024) | [Environmental Science & Technology](https://pubs.acs.org/doi/10.1021/acs.est.4c07842) | [Project page](http://www.liuhuibot.com/amrpolicy) | RAG-based agent integrating multisectoral antimicrobial-resistance policy documents |
-| Epidemic Information Extraction with LLMs (2024) | [arXiv](https://arxiv.org/abs/2408.14277) | — | LLM-ensemble extractor producing structured outbreak signals from ProMED and WHO outbreak reports |
-| AD-AutoGPT (2025) | [PLOS Global Public Health](https://doi.org/10.1371/journal.pgph.0004383) | [GitHub](https://github.com/levyisthebest/AD-AutoGPT) | Autonomous LLM agent scraping disease news and visualizing spatio-temporal infodemiology trends |
-| BEACON (2025) | [Journal of Infectious Diseases](https://doi.org/10.1093/infdis/jiaf642) | [Project page](https://beaconbio.org/) | Event-based surveillance pairing a domain-adapted LLM agent with analyst-in-the-loop review |
-| LLM Agentic Framework for Cholera Risk (2025) | [Springer LNCS](https://doi.org/10.1007/978-3-032-11733-5_31) | — | LLM agent reasoning over feature-importance and regression artifacts for cholera-risk policy guidance |
-| AI-VaxGuide (2025) | [arXiv](https://arxiv.org/abs/2507.03493) | [HF](https://huggingface.co/VaxGuide) | Agentic RAG over immunization protocols for point-of-care vaccination guidance |
-| Multi-Agent Counterspeech for Health Misinformation (2025) | [COLM](https://arxiv.org/abs/2507.07307) | — | Multi-agent system coordinating retrieval, evidence enhancement, and response refinement for health-misinformation counterspeech |
-| Tobacco Misinformation Multi-Agent Pipeline (2025) | [Frontiers in Artificial Intelligence](https://doi.org/10.3389/frai.2025.1659861) | [GitHub](https://github.com/sherifelmitwalli/misinformation-app) | Three-agent pipeline producing credibility scores for tobacco-misinformation claims |
-| EpidemIQs (2025) | [arXiv](https://arxiv.org/abs/2510.00024) | [GitHub](https://github.com/KsuNetse/EpidemIQs) | Multi-agent scientist-plus-task-expert framework running prompt-to-paper epidemic-modeling pipelines |
-| EpiPlanAgent (2025) | [arXiv](https://arxiv.org/abs/2512.10313) | — | Multi-agent system for epidemic-response planning with task decomposition, RAG over emergency standards, and scenario simulation |
-| EpiAgent (2026) | [arXiv](https://arxiv.org/abs/2602.00299) | — | Iterative program-synthesis agent that auto-builds and recalibrates compartmental epidemic simulators |
-
-### Public Health AI Scientists
-*This bucket is intentionally empty.* No published system in the public-health subdomain currently satisfies all four AI Scientist properties. 
-
-## Contributing
-
-Contributions are welcome. Please open a pull request and:
-- place the entry in the cell matching its paradigm and subdomain;
-- use a stable link (DOI, arXiv, or official repository) and avoid duplicates;
-- list only the system itself, not benchmarks, reviews, or evaluation studies.
+Chen, Qingyu, Xin Wang, Rong Zhou, Hyunjae Kim, Shuai Wang, Wenjun Zhao, Tianyu Liu, Irbaz Riaz, Lifang He, Yize Zhao, Carlos Oliver, Gunjan Tiyyagura, Mark Iscoe, Fares Alahdab, Hongyu Zhao, Hua Xu, and Zhiyong Lu. “From AI Agents to AI Scientists in Health: Emerging Landscape, Challenges, and the Path Forward.” June 6, 2026. Available at [SSRN](https://ssrn.com/abstract=6889798) or [https://doi.org/10.2139/ssrn.6889798](https://doi.org/10.2139/ssrn.6889798).
