@@ -19,8 +19,7 @@ These functions may connect sequentially, recur iteratively, or operate in paral
 
 ## Representative systems
 
-The evidence map begins with the peer-reviewed systems compared in the current manuscript and extends them with newly audited health-domain systems. Emerging preprints are listed separately from peer-reviewed work. Systems are assigned by their primary demonstrated application, although some cross domain boundaries. **AI** and **Human** labels describe reported contributions, not relative importance.
-
+The evidence map begins with the peer-reviewed systems compared in the current manuscript and extends them with newly audited health-domain systems. Emerging preprints are listed separately from peer-reviewed work.
 ### Preclinical biomedical research
 
 These systems support biomedical discovery before or alongside clinical testing, including hypothesis development, molecular design, experimental analysis, and evidence synthesis.
