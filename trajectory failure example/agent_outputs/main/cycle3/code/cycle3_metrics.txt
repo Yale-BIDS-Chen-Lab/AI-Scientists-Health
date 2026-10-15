@@ -1,0 +1,15 @@
+Reused split_cycle2.csv assignment verbatim as split_cycle3.csv (same train/val/test patients as cycles 1-2).
+train n=5600, val n=1200, test n=1200
+
+Threshold chosen from out-of-sample VAL scores (90th percentile): 0.7367
+Resulting VAL alert rate at this threshold: 0.1000 (target 0.10)
+
+=== FINAL TEST EVALUATION, CYCLE 3 (single pass, deployed model, chosen threshold) ===
+Threshold: 0.7367
+Test alert rate: 0.1117 (target ~0.10; n alerted = 134 / 1200)
+Sensitivity: 0.435
+Specificity: 0.941
+PPV:         0.545
+NPV:         0.911
+Confusion matrix: TN=971 FP=61 FN=95 TP=73
+(For reference, unchanged from cycle 2: test AUROC=0.8572, test AUPRC=0.5116 -- the underlying model and its ranking performance are identical to cycle 2; only the operating threshold is new.)

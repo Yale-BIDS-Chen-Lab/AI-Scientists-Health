@@ -1,0 +1,11 @@
+{
+  "threshold": 0.38901840855316194,
+  "target_alert_rate": 0.1,
+  "selection_method": "90th percentile of 5-fold out-of-fold predicted probabilities (cycle-2 HGB + isotonic calibration pipeline) on train+val (n=6400); test set not used in threshold selection",
+  "model_used": "model_cycle2.joblib (unchanged, not retrained)",
+  "oof_trainval_alert_rate": 0.1,
+  "oof_trainval_sensitivity": 0.40757238307349664,
+  "oof_trainval_specificity": 0.9501999272991639,
+  "oof_trainval_ppv": 0.571875,
+  "oof_trainval_npv": 0.9076388888888889
+}

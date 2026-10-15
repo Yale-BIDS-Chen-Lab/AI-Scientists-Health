@@ -1,0 +1,90 @@
+Feature matrix: 8000 patients x 232 features
+Overall mortality rate: 0.1403
+train n=5600 (deaths=785), val n=1200 (deaths=169), test n=1200 (deaths=168)
+
+--- Hyperparameter search (train fit, val AUROC) ---
+  {'learning_rate': 0.05, 'max_leaf_nodes': 15, 'l2_regularization': 0.0} -> val AUROC=0.8653 (n_iter=83)
+  {'learning_rate': 0.05, 'max_leaf_nodes': 31, 'l2_regularization': 1.0} -> val AUROC=0.8618 (n_iter=68)
+  {'learning_rate': 0.1, 'max_leaf_nodes': 15, 'l2_regularization': 1.0} -> val AUROC=0.8611 (n_iter=47)
+  {'learning_rate': 0.1, 'max_leaf_nodes': 31, 'l2_regularization': 0.0} -> val AUROC=0.8535 (n_iter=34)
+  {'learning_rate': 0.1, 'max_leaf_nodes': 63, 'l2_regularization': 1.0} -> val AUROC=0.8588 (n_iter=33)
+Best HGB params: {'learning_rate': 0.05, 'max_leaf_nodes': 15, 'l2_regularization': 0.0} (val AUROC=0.8653)
+Final HGB refit on train+val (n=6800), n_iter=100
+
+--- Logistic regression reference model (train fit, val AUROC) ---
+  C=0.003 -> val AUROC=0.8562
+  C=0.01 -> val AUROC=0.8585
+  C=0.03 -> val AUROC=0.8595
+  C=0.1 -> val AUROC=0.8595
+  C=0.3 -> val AUROC=0.8591
+Logistic regression: best C=0.1 (val AUROC=0.8595), refit on train+val
+
+Decision threshold chosen on val (Youden's J): 0.5412
+
+=== FINAL TEST EVALUATION (single pass, not used for any tuning) ===
+Test AUROC:  0.8527
+Test AUPRC:  0.5019 (base rate 0.1400)
+Test Brier:  0.1312
+At threshold 0.5412: sensitivity=0.679, specificity=0.843, PPV=0.413, NPV=0.942
+Confusion matrix: TN=870 FP=162 FN=54 TP=114
+
+Calibration by predicted-risk decile (test set):
+                                mean_pred  obs_rate    n
+bin                                                     
+(0.010499999999999999, 0.0332]   0.024021  0.000000  120
+(0.0332, 0.0575]                 0.044671  0.025000  120
+(0.0575, 0.0836]                 0.069131  0.008333  120
+(0.0836, 0.124]                  0.100798  0.016667  120
+(0.124, 0.19]                    0.152283  0.058333  120
+(0.19, 0.295]                    0.239029  0.083333  120
+(0.295, 0.431]                   0.364639  0.133333  120
+(0.431, 0.605]                   0.511063  0.183333  120
+(0.605, 0.751]                   0.677942  0.325000  120
+(0.751, 0.934]                   0.831831  0.566667  120
+
+[Reference] Logistic regression test AUROC: 0.8477
+
+--- Permutation importance (primary model, test set, single pass) ---
+                          feature  importance_mean  importance_std
+                         GCS_last         0.073839        0.006010
+                        age_years         0.017671        0.004956
+                       Urine_mean         0.008283        0.003298
+icu_type_cardiac_surgery_recovery         0.007780        0.002119
+                          GCS_max         0.007096        0.001146
+                         GCS_mean         0.004103        0.000525
+                     Glucose_last         0.003265        0.002862
+                      Urine_count         0.002588        0.000565
+                     Albumin_mean         0.002323        0.001030
+                        Temp_mean         0.002158        0.000635
+                        Urine_max         0.001789        0.001502
+                    RespRate_mean         0.001606        0.001122
+                      Albumin_max         0.001365        0.000306
+                           Na_max         0.001305        0.000325
+                    NISysABP_last         0.001226        0.000560
+                 icu_type_medical         0.001175        0.000515
+                   Platelets_mean         0.001090        0.000958
+                          Mg_last         0.001036        0.000408
+                        HCT_count         0.000997        0.000570
+                        GCS_count         0.000986        0.000352
+                         ALP_last         0.000932        0.000842
+                          HR_mean         0.000720        0.000566
+                  Creatinine_last         0.000709        0.000425
+                       PaCO2_mean         0.000648        0.000659
+                          ALP_min         0.000619        0.000308
+
+Top 15 logistic-regression standardized coefficients (sanity check on direction):
+GCS_last            -0.793886
+Bilirubin_last       0.652426
+GCS_min              0.536201
+measured_MAP        -0.481739
+age_years            0.470261
+measured_ALP        -0.453092
+GCS_mean            -0.444238
+pH_mean              0.439051
+BUN_last             0.431505
+Na_last              0.412791
+measured_RespRate   -0.384774
+pH_min              -0.377399
+Creatinine_count    -0.359411
+Bilirubin_max       -0.355519
+ALP_last             0.342574

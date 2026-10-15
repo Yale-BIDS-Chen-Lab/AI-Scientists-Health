@@ -1,0 +1,51 @@
+{
+  "threshold": 0.38901840855316194,
+  "n_test": 1600,
+  "test_alert_rate": 0.110625,
+  "test_auroc": 0.8774835833679401,
+  "test_sensitivity": 0.46875,
+  "test_specificity": 0.9476744186046512,
+  "test_ppv": 0.5932203389830508,
+  "test_npv": 0.9163738580463809,
+  "test_confusion_matrix": {
+    "tn": 1304,
+    "fp": 72,
+    "fn": 119,
+    "tp": 105
+  },
+  "test_subgroup_alert": {
+    "surgical": {
+      "n": 457,
+      "deaths": 63,
+      "alert_rate": 0.1137855579868709,
+      "sensitivity": 0.5873015873015873,
+      "ppv": 0.7115384615384616
+    },
+    "cardiac_surgery_recovery": {
+      "n": 336,
+      "deaths": 18,
+      "alert_rate": 0.03571428571428571,
+      "sensitivity": 0.4444444444444444,
+      "ppv": 0.6666666666666666
+    },
+    "coronary_care": {
+      "n": 231,
+      "deaths": 28,
+      "alert_rate": 0.09090909090909091,
+      "sensitivity": 0.39285714285714285,
+      "ppv": 0.5238095238095238
+    },
+    "medical": {
+      "n": 576,
+      "deaths": 115,
+      "alert_rate": 0.1597222222222222,
+      "sensitivity": 0.4260869565217391,
+      "ppv": 0.532608695652174
+    }
+  },
+  "oof_trainval_alert_rate": 0.1,
+  "oof_trainval_sensitivity": 0.40757238307349664,
+  "oof_trainval_specificity": 0.9501999272991639,
+  "oof_trainval_ppv": 0.571875,
+  "oof_trainval_npv": 0.9076388888888889
+}

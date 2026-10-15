@@ -1,0 +1,52 @@
+{
+  "cycle": 2,
+  "setc": {
+    "n": 4000,
+    "deaths": 585,
+    "auroc": 0.8771162918747106
+  },
+  "setc_by_unit": {
+    "cardiac_surgery_recovery": {
+      "n": 874,
+      "deaths": 46,
+      "auroc": 0.8961615206889308
+    },
+    "coronary_care": {
+      "n": 602,
+      "deaths": 71,
+      "auroc": 0.8268480942150075
+    },
+    "medical": {
+      "n": 1376,
+      "deaths": 291,
+      "auroc": 0.8494591983783868
+    },
+    "surgical": {
+      "n": 1148,
+      "deaths": 177,
+      "auroc": 0.8791798309157662
+    }
+  },
+  "dev_by_split": {
+    "test": {
+      "n": 1200,
+      "deaths": 168,
+      "auroc": 0.8572120708748614
+    },
+    "train": {
+      "n": 5600,
+      "deaths": 785,
+      "auroc": 0.9375462825168165
+    },
+    "val": {
+      "n": 1200,
+      "deaths": 169,
+      "auroc": 0.9378210389178083
+    }
+  },
+  "dev_all": {
+    "n": 8000,
+    "deaths": 1122,
+    "auroc": 0.9258198269923633
+  }
+}

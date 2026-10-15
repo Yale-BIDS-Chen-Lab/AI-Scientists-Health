@@ -1,0 +1,13 @@
+{
+  "threshold": 0.7367499722817072,
+  "target_alert_rate": 0.1,
+  "val_alert_rate_at_threshold": 0.1,
+  "test_alert_rate_at_threshold": 0.11166666666666666,
+  "test_sensitivity": 0.43452380952380953,
+  "test_specificity": 0.9408914728682171,
+  "test_ppv": 0.5447761194029851,
+  "test_npv": 0.9108818011257036,
+  "selected_on": "val (out-of-sample scores from train-only refit of cycle-2 sub-models)",
+  "applied_to": "model_cycle2.pkl (deployed, train+val-fit) predictions",
+  "model_source": "model_cycle2.pkl"
+}

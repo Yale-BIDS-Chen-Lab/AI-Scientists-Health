@@ -1,0 +1,118 @@
+{
+  "n_total": 8000,
+  "n_train": 4800,
+  "n_val": 1600,
+  "n_test": 1600,
+  "reused_split_from": "split_cycle1.csv",
+  "n_features_cycle1": 195,
+  "n_features_cycle2": 347,
+  "ablation_cv_auroc_cycle1_features": {
+    "mean": 0.8634975865854134,
+    "std": 0.012216852229142709
+  },
+  "ablation_cv_auroc_cycle2_features": {
+    "mean": 0.8639807034311883,
+    "std": 0.0104746534932913
+  },
+  "model_selection_cv_results": {
+    "logreg_C0.01": {
+      "cv_auroc_mean": 0.857051498806739,
+      "cv_auroc_std": 0.008609277247814219
+    },
+    "logreg_C0.1": {
+      "cv_auroc_mean": 0.8486609143510669,
+      "cv_auroc_std": 0.009680960527669544
+    },
+    "logreg_C1.0": {
+      "cv_auroc_mean": 0.8399105118436584,
+      "cv_auroc_std": 0.010303123452536636
+    },
+    "hgb_leaf15_lr0.05_l21.0": {
+      "cv_auroc_mean": 0.8639807034311883,
+      "cv_auroc_std": 0.0104746534932913
+    },
+    "hgb_leaf31_lr0.05_l21.0": {
+      "cv_auroc_mean": 0.8606845591223455,
+      "cv_auroc_std": 0.0112941807602551
+    },
+    "hgb_leaf15_lr0.03_l22.0": {
+      "cv_auroc_mean": 0.8655895159101711,
+      "cv_auroc_std": 0.008198251825305421
+    },
+    "hgb_leaf63_lr0.03_l22.0": {
+      "cv_auroc_mean": 0.8548016820204541,
+      "cv_auroc_std": 0.014088674465958143
+    },
+    "rf_n500_dNone_msl5": {
+      "cv_auroc_mean": 0.8563037595598872,
+      "cv_auroc_std": 0.00927994009567002
+    },
+    "rf_n500_d12_msl2": {
+      "cv_auroc_mean": 0.8547936441577727,
+      "cv_auroc_std": 0.010869514640638015
+    },
+    "extratrees_n500": {
+      "cv_auroc_mean": 0.8596409970959191,
+      "cv_auroc_std": 0.007416798516756826
+    },
+    "gbrt_lr0.05_d3": {
+      "cv_auroc_mean": 0.8647849462767354,
+      "cv_auroc_std": 0.009816414356809276
+    }
+  },
+  "selected_model": "hgb_leaf15_lr0.03_l22.0",
+  "selected_model_cv_auroc": {
+    "cv_auroc_mean": 0.8655895159101711,
+    "cv_auroc_std": 0.008198251825305421
+  },
+  "operating_threshold_youden": 0.35598370063136814,
+  "operating_threshold_high_sens": 0.26688559065323597,
+  "test_auroc": 0.8774835833679401,
+  "test_auprc": 0.5580168622722164,
+  "test_brier": 0.08489661112919183,
+  "test_sensitivity": 0.5133928571428571,
+  "test_specificity": 0.9411337209302325,
+  "test_ppv": 0.5867346938775511,
+  "test_npv": 0.9223646723646723,
+  "test_confusion_matrix": {
+    "tn": 1295,
+    "fp": 81,
+    "fn": 109,
+    "tp": 115
+  },
+  "high_sens_test_sensitivity": 0.6383928571428571,
+  "high_sens_test_specificity": 0.8880813953488372,
+  "high_sens_test_ppv": 0.48148148148148145,
+  "high_sens_test_npv": 0.9378357636224098,
+  "high_sens_test_confusion_matrix": {
+    "tn": 1222,
+    "fp": 154,
+    "fn": 81,
+    "tp": 143
+  },
+  "test_subgroup_auroc_by_icu_type": {
+    "surgical": {
+      "n": 457,
+      "deaths": 63,
+      "auroc": 0.8898356296833454
+    },
+    "cardiac_surgery_recovery": {
+      "n": 336,
+      "deaths": 18,
+      "auroc": 0.9235674353598882
+    },
+    "coronary_care": {
+      "n": 231,
+      "deaths": 28,
+      "auroc": 0.8298733286418016
+    },
+    "medical": {
+      "n": 576,
+      "deaths": 115,
+      "auroc": 0.8366688673017071
+    }
+  },
+  "cycle1_test_auroc_for_reference": 0.8678623338870433,
+  "cycle1_test_auprc_for_reference": 0.5319709915511441,
+  "cycle1_test_brier_for_reference": 0.08753171075681854
+}

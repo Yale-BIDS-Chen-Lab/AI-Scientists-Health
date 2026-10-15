@@ -1,0 +1,92 @@
+{
+  "n_total": 8000,
+  "n_train": 4800,
+  "n_val": 1600,
+  "n_test": 1600,
+  "prevalence_train": 0.14020833333333332,
+  "prevalence_val": 0.140625,
+  "prevalence_test": 0.14,
+  "selected_model": "hgb_leaf15_lr0.05_l21.0",
+  "selection_val_auroc": 0.8654189898989898,
+  "selection_val_auprc": 0.5355527545169001,
+  "selection_val_brier": 0.12309431705519319,
+  "operating_threshold": 0.38468707568787486,
+  "test_auroc": 0.8678623338870433,
+  "test_auprc": 0.5319709915511441,
+  "test_brier": 0.08753171075681854,
+  "test_sensitivity": 0.46875,
+  "test_specificity": 0.9462209302325582,
+  "test_ppv": 0.5865921787709497,
+  "test_npv": 0.916256157635468,
+  "test_confusion_matrix": {
+    "tn": 1302,
+    "fp": 74,
+    "fn": 119,
+    "tp": 105
+  },
+  "high_sens_threshold": 0.24955487073065077,
+  "high_sens_test_sensitivity": 0.6473214285714286,
+  "high_sens_test_specificity": 0.876453488372093,
+  "high_sens_test_ppv": 0.4603174603174603,
+  "high_sens_test_npv": 0.9385214007782101,
+  "high_sens_test_confusion_matrix": {
+    "tn": 1206,
+    "fp": 170,
+    "fn": 79,
+    "tp": 145
+  },
+  "test_subgroup_auroc_by_icu_type": {
+    "cardiac_surgery_recovery": {
+      "n": 336,
+      "deaths": 18,
+      "auroc": 0.9246156533892382
+    },
+    "surgical": {
+      "n": 457,
+      "deaths": 63,
+      "auroc": 0.8772661348803481
+    },
+    "medical": {
+      "n": 576,
+      "deaths": 115,
+      "auroc": 0.823059511459021
+    },
+    "coronary_care": {
+      "n": 231,
+      "deaths": 28,
+      "auroc": 0.8264426460239268
+    }
+  },
+  "all_candidates": {
+    "logreg_C0.01": {
+      "auroc": 0.8537309090909092,
+      "auprc": 0.5210868621378598,
+      "brier": 0.1457093044587549
+    },
+    "logreg_C0.1": {
+      "auroc": 0.8565204040404041,
+      "auprc": 0.5230052165744283,
+      "brier": 0.14271493203228075
+    },
+    "logreg_C1.0": {
+      "auroc": 0.8530165656565656,
+      "auprc": 0.5192403832363649,
+      "brier": 0.14344669749665567
+    },
+    "hgb_leaf15_lr0.1_l20.0": {
+      "auroc": 0.8627232323232323,
+      "auprc": 0.5413030726600458,
+      "brier": 0.11576087186652234
+    },
+    "hgb_leaf31_lr0.05_l21.0": {
+      "auroc": 0.8619183838383838,
+      "auprc": 0.5202599049179929,
+      "brier": 0.11108069392802737
+    },
+    "hgb_leaf15_lr0.05_l21.0": {
+      "auroc": 0.8654189898989898,
+      "auprc": 0.5355527545169001,
+      "brier": 0.12309431705519319
+    }
+  }
+}

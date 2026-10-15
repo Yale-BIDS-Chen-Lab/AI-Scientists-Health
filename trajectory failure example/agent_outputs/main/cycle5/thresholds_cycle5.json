@@ -1,0 +1,80 @@
+{
+  "threshold": 0.7367499722817072,
+  "per_unit": {
+    "cardiac_surgery_recovery": 0.3769313873446874,
+    "coronary_care": 0.7045960954249532,
+    "medical": 0.8103672134391636,
+    "surgical": 0.7177297806190036
+  },
+  "note": "Unchanged from thresholds_cycle4.json. No new model was fit and no threshold was retuned in cycle 5; this file is carried forward verbatim as the deployment-review-board record of the currently deployed alert policy. 'threshold' is the single-cutoff fallback (used only if a patient's icu_type is missing/unrecognized); 'per_unit' (keyed by icu_type) is the policy actually in effect, adopted in cycle 4 to fix under-alerting in the cardiac_surgery_recovery unit.",
+  "target_alert_rate": 0.10,
+  "selected_on": "val (out-of-sample scores from a train-only refit of the deployed sub-models); see cycle 3 (global threshold) and cycle 4 (per-unit thresholds)",
+  "applied_to": "model_cycle2.pkl (deployed, train+val-fit) predictions",
+  "model_source": "model_cycle2.pkl",
+  "usage": "for a given patient, look up per_unit[patient's icu_type]; fall back to the top-level threshold only if icu_type is missing/unrecognized",
+  "deployed_policy_test_performance_overall": {
+    "n": 1200,
+    "alert_rate": 0.10833333333333334,
+    "tp": 65,
+    "fp": 65,
+    "fn": 103,
+    "tn": 967,
+    "sensitivity": 0.3869047619047619,
+    "specificity": 0.937015503875969,
+    "ppv": 0.5,
+    "npv": 0.9037383177570093
+  },
+  "deployed_policy_test_performance_by_unit": {
+    "cardiac_surgery_recovery": {
+      "threshold": 0.3769313873446874,
+      "n": 232,
+      "alert_rate": 0.13793103448275862,
+      "tp": 6, "fp": 26, "fn": 4, "tn": 196,
+      "sensitivity": 0.6,
+      "specificity": 0.8828828828828829,
+      "ppv": 0.1875,
+      "npv": 0.98
+    },
+    "coronary_care": {
+      "threshold": 0.7045960954249532,
+      "n": 184,
+      "alert_rate": 0.09782608695652174,
+      "tp": 7, "fp": 11, "fn": 10, "tn": 156,
+      "sensitivity": 0.4117647058823529,
+      "specificity": 0.9341317365269461,
+      "ppv": 0.3888888888888889,
+      "npv": 0.9397590361445783
+    },
+    "medical": {
+      "threshold": 0.8103672134391636,
+      "n": 430,
+      "alert_rate": 0.09534883720930233,
+      "tp": 25, "fp": 16, "fn": 59, "tn": 330,
+      "sensitivity": 0.2976190476190476,
+      "specificity": 0.953757225433526,
+      "ppv": 0.6097560975609756,
+      "npv": 0.8483290488431876
+    },
+    "surgical": {
+      "threshold": 0.7177297806190036,
+      "n": 354,
+      "alert_rate": 0.11016949152542373,
+      "tp": 27, "fp": 12, "fn": 30, "tn": 285,
+      "sensitivity": 0.47368421052631576,
+      "specificity": 0.9595959595959596,
+      "ppv": 0.6923076923076923,
+      "npv": 0.9047619047619048
+    }
+  },
+  "superseded_single_global_threshold_test_performance_for_reference_only": {
+    "note": "Cycle-3 policy (one global threshold for all units), replaced in cycle 4. Kept here only as an audit-trail reference point, not part of the deployed policy.",
+    "overall": {
+      "n": 1200, "alert_rate": 0.11166666666666666,
+      "tp": 73, "fp": 61, "fn": 95, "tn": 971,
+      "sensitivity": 0.43452380952380953,
+      "specificity": 0.9408914728682171,
+      "ppv": 0.5447761194029851,
+      "npv": 0.9108818011257036
+    }
+  }
+}

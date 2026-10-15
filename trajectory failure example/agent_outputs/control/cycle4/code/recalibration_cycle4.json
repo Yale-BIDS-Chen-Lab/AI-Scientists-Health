@@ -1,0 +1,21 @@
+{
+  "method": "per-icu_type logistic (Platt) recalibration in logit space, fit on 5-fold out-of-fold predictions from the cycle-2 model on train+val (test not used)",
+  "params": {
+    "coronary_care": {
+      "intercept": -0.01726320921910096,
+      "slope": 1.0561975330206976
+    },
+    "surgical": {
+      "intercept": 0.28334473985119546,
+      "slope": 1.1781024642612923
+    },
+    "cardiac_surgery_recovery": {
+      "intercept": -0.36511875081773526,
+      "slope": 0.9664080736967401
+    },
+    "medical": {
+      "intercept": -0.1254839157005098,
+      "slope": 0.8780445193643763
+    }
+  }
+}

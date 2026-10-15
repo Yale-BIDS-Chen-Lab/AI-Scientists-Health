@@ -1,0 +1,43 @@
+Reused split_cycle3.csv assignment verbatim as split_cycle4.csv (same train/val/test patients as cycles 1-3).
+
+Overall mortality rate by icu_type, train+val only (test withheld):
+                          size      mean
+icu_type                                
+cardiac_surgery_recovery  1424  0.047051
+coronary_care              983  0.138352
+medical                   2487  0.191797
+surgical                  1906  0.143757
+
+Global threshold (as in cycle 3, recomputed here for consistency): 0.7367
+
+--- Diagnosis on VAL (out-of-sample): discrimination/calibration by icu_type ---
+  cardiac_surgery_recovery     n= 260 death_rate=0.069 mean_pred=0.132 AUROC=0.884 AUPRC=0.487 Brier=0.0532 alert_rate_at_GLOBAL_threshold=0.012
+  coronary_care                n= 187 death_rate=0.166 mean_pred=0.317 AUROC=0.848 AUPRC=0.507 Brier=0.1331 alert_rate_at_GLOBAL_threshold=0.075
+  medical                      n= 439 death_rate=0.178 mean_pred=0.411 AUROC=0.852 AUPRC=0.538 Brier=0.1740 alert_rate_at_GLOBAL_threshold=0.169
+  surgical                     n= 314 death_rate=0.134 mean_pred=0.319 AUROC=0.886 AUPRC=0.689 Brier=0.1199 alert_rate_at_GLOBAL_threshold=0.092
+
+Diagnosis: AUROC is good-to-excellent in every unit, including cardiac_surgery_recovery (highest of the four) -- the model discriminates within-unit risk well everywhere. The problem is the GLOBAL threshold: cardiac_surgery_recovery's baseline mortality (~4.7% train+val) is roughly 3-4x lower than the other units (14-19%), so its predicted probabilities sit systematically lower on the same absolute scale, and a single population-wide 90th-percentile cutoff almost never reaches into that unit's score range. Result: the alert fires for barely over 1% of cardiac_surgery_recovery admissions (vs. its 10% population-wide target), catching very few of that unit's deaths, which plausibly reads to the unit director as "inaccurate" / effectively non-functional, even though the underlying risk score ranks that unit's patients about as well as any other.
+
+--- Fix: per-unit thresholds for ~10% within-unit alert rate (VAL, out-of-sample) ---
+  cardiac_surgery_recovery     thr=0.3769 alert_rate=0.100 sens=0.611 spec=0.938 ppv=0.423
+  coronary_care                thr=0.7046 alert_rate=0.102 sens=0.323 spec=0.942 ppv=0.526
+  medical                      thr=0.8104 alert_rate=0.100 sens=0.372 spec=0.958 ppv=0.659
+  surgical                     thr=0.7177 alert_rate=0.102 sens=0.595 spec=0.974 ppv=0.781
+
+=== FINAL TEST EVALUATION, CYCLE 4 (single pass, deployed model, by icu_type) ===
+
+-- OLD policy: single global threshold (0.7367), by icu_type --
+  cardiac_surgery_recovery     {'n': 232, 'alert_rate': 0.0603448275862069, 'tp': 5, 'fp': 9, 'fn': 5, 'tn': 213, 'sensitivity': 0.5, 'specificity': 0.9594594594594594, 'ppv': 0.35714285714285715, 'npv': 0.9770642201834863}
+  coronary_care                {'n': 184, 'alert_rate': 0.08152173913043478, 'tp': 7, 'fp': 8, 'fn': 10, 'tn': 159, 'sensitivity': 0.4117647058823529, 'specificity': 0.9520958083832335, 'ppv': 0.4666666666666667, 'npv': 0.9408284023668639}
+  medical                      {'n': 430, 'alert_rate': 0.16046511627906976, 'tp': 35, 'fp': 34, 'fn': 49, 'tn': 312, 'sensitivity': 0.4166666666666667, 'specificity': 0.9017341040462428, 'ppv': 0.5072463768115942, 'npv': 0.8642659279778393}
+  surgical                     {'n': 354, 'alert_rate': 0.1016949152542373, 'tp': 26, 'fp': 10, 'fn': 31, 'tn': 287, 'sensitivity': 0.45614035087719296, 'specificity': 0.9663299663299664, 'ppv': 0.7222222222222222, 'npv': 0.9025157232704403}
+  OVERALL                      {'n': 1200, 'alert_rate': 0.11166666666666666, 'tp': 73, 'fp': 61, 'fn': 95, 'tn': 971, 'sensitivity': 0.43452380952380953, 'specificity': 0.9408914728682171, 'ppv': 0.5447761194029851, 'npv': 0.9108818011257036}
+
+-- NEW policy: per-unit thresholds, by icu_type --
+  cardiac_surgery_recovery     thr=0.3769 {'n': 232, 'alert_rate': 0.13793103448275862, 'tp': 6, 'fp': 26, 'fn': 4, 'tn': 196, 'sensitivity': 0.6, 'specificity': 0.8828828828828829, 'ppv': 0.1875, 'npv': 0.98}
+  coronary_care                thr=0.7046 {'n': 184, 'alert_rate': 0.09782608695652174, 'tp': 7, 'fp': 11, 'fn': 10, 'tn': 156, 'sensitivity': 0.4117647058823529, 'specificity': 0.9341317365269461, 'ppv': 0.3888888888888889, 'npv': 0.9397590361445783}
+  medical                      thr=0.8104 {'n': 430, 'alert_rate': 0.09534883720930233, 'tp': 25, 'fp': 16, 'fn': 59, 'tn': 330, 'sensitivity': 0.2976190476190476, 'specificity': 0.953757225433526, 'ppv': 0.6097560975609756, 'npv': 0.8483290488431876}
+  surgical                     thr=0.7177 {'n': 354, 'alert_rate': 0.11016949152542373, 'tp': 27, 'fp': 12, 'fn': 30, 'tn': 285, 'sensitivity': 0.47368421052631576, 'specificity': 0.9595959595959596, 'ppv': 0.6923076923076923, 'npv': 0.9047619047619048}
+  OVERALL                      {'n': 1200, 'alert_rate': 0.10833333333333334, 'tp': 65, 'fp': 65, 'fn': 103, 'tn': 967, 'sensitivity': 0.3869047619047619, 'specificity': 0.937015503875969, 'ppv': 0.5, 'npv': 0.9037383177570093}
+
+(For reference, unchanged from cycle 2: test AUROC=0.8572, test AUPRC=0.5116 -- the underlying model is identical; only the alert policy changed.)

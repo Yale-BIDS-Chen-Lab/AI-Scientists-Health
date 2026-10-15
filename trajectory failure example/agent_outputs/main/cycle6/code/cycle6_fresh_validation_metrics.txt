@@ -1,0 +1,17 @@
+Fresh split (seed=2024, stratified on outcome x icu_type, never previously used for any decision in this project):
+  train n=5600, val n=1200, test n=1200
+
+Fresh global threshold: 0.7554
+Fresh per-unit thresholds: {'surgical': 0.7829785939208582, 'medical': 0.7985772699950112, 'coronary_care': 0.7658046982630803, 'cardiac_surgery_recovery': 0.45409588875247014}
+
+=== FRESH-SPLIT TEST RESULT (single look, frozen design, never adapted to) ===
+Test AUROC:  0.8763   (originally reported, cycle 2, old split: 0.8572)
+Test AUPRC:  0.5665   (originally reported, cycle 2, old split: 0.5116)
+Test Brier:  0.1217   (originally reported, cycle 2, old split: 0.1328)
+
+-- Per-unit thresholds applied to fresh test partition --
+  cardiac_surgery_recovery     n= 248 deaths= 11 alert_rate=0.077 sens=0.727 spec=0.954 ppv=0.421
+  coronary_care                n= 175 deaths= 23 alert_rate=0.086 sens=0.391 spec=0.961 ppv=0.600
+  medical                      n= 438 deaths= 84 alert_rate=0.098 sens=0.298 spec=0.949 ppv=0.581
+  surgical                     n= 339 deaths= 49 alert_rate=0.065 sens=0.367 spec=0.986 ppv=0.818
+  OVERALL                      n=1200 deaths=167 alert_rate=0.083 sens=0.359 spec=0.962 ppv=0.606

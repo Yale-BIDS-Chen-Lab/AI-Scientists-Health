@@ -1,0 +1,103 @@
+{
+  "note": "All numbers below are train+val only (honest out-of-fold or doubly-cross-validated as labeled); test set was not used anywhere in this cycle.",
+  "diagnosis_trainval_oof": [
+    {
+      "icu_type": "cardiac_surgery_recovery",
+      "n": 1320,
+      "deaths": 59,
+      "observed_rate": 0.0446969696969697,
+      "mean_predicted": 0.05652686626563682,
+      "ratio_pred_over_obs": 1.264668872383739
+    },
+    {
+      "icu_type": "coronary_care",
+      "n": 936,
+      "deaths": 125,
+      "observed_rate": 0.13354700854700854,
+      "mean_predicted": 0.14110435255042483,
+      "ratio_pred_over_obs": 1.0565893918975813
+    },
+    {
+      "icu_type": "medical",
+      "n": 2341,
+      "deaths": 446,
+      "observed_rate": 0.19051687313114055,
+      "mean_predicted": 0.18980051341729132,
+      "ratio_pred_over_obs": 0.9962399145961411
+    },
+    {
+      "icu_type": "surgical",
+      "n": 1803,
+      "deaths": 268,
+      "observed_rate": 0.14864115363283417,
+      "mean_predicted": 0.14174301159986888,
+      "ratio_pred_over_obs": 0.9535919772931477
+    }
+  ],
+  "honest_double_cv_check": [
+    {
+      "icu_type": "cardiac_surgery_recovery",
+      "n": 1320.0,
+      "observed_rate": 0.0446969696969697,
+      "mean_predicted_before": 0.05652686626563682,
+      "mean_predicted_after": 0.04411210751775171,
+      "auroc_before": 0.8920348391779459,
+      "auroc_after": 0.8838089221629324,
+      "brier_before": 0.0341605030431195,
+      "brier_after": 0.034848300611207646,
+      "ratio_before": 1.264668872383739,
+      "ratio_after": 0.9869149478547838
+    },
+    {
+      "icu_type": "coronary_care",
+      "n": 936.0,
+      "observed_rate": 0.13354700854700854,
+      "mean_predicted_before": 0.14110435255042483,
+      "mean_predicted_after": 0.13353911256726556,
+      "auroc_before": 0.8596843403205918,
+      "auroc_after": 0.856636251541307,
+      "brier_before": 0.08462415348241911,
+      "brier_after": 0.08510819255728996,
+      "ratio_before": 1.0565893918975813,
+      "ratio_after": 0.9999408749036846
+    },
+    {
+      "icu_type": "medical",
+      "n": 2341.0,
+      "observed_rate": 0.19051687313114055,
+      "mean_predicted_before": 0.18980051341729132,
+      "mean_predicted_after": 0.19045885646826083,
+      "auroc_before": 0.8128435699326761,
+      "auroc_after": 0.8121650082231976,
+      "brier_before": 0.11993905816336636,
+      "brier_after": 0.11985998472815514,
+      "ratio_before": 0.9962399145961411,
+      "ratio_after": 0.9996954775609833
+    },
+    {
+      "icu_type": "surgical",
+      "n": 1803.0,
+      "observed_rate": 0.14864115363283417,
+      "mean_predicted_before": 0.14174301159986888,
+      "mean_predicted_after": 0.14864478094247052,
+      "auroc_before": 0.8821381690894065,
+      "auroc_after": 0.8817188487529779,
+      "brier_before": 0.08805919268653789,
+      "brier_after": 0.08754221039869511,
+      "ratio_before": 0.9535919772931477,
+      "ratio_after": 1.0000244031316208
+    }
+  ],
+  "overall_auroc_before": 0.8645428793255177,
+  "overall_auroc_after": 0.8646997366416262,
+  "overall_brier_before": 0.08810127050792665,
+  "overall_brier_after": 0.08813935228716813,
+  "threshold": 0.38811336448615297,
+  "design_trainval_alert_rate": 0.1,
+  "design_trainval_alert_rate_by_icu_type": {
+    "coronary_care": 0.09081196581196581,
+    "surgical": 0.13089295618413754,
+    "cardiac_surgery_recovery": 0.012878787878787878,
+    "medical": 0.12900469884664673
+  }
+}

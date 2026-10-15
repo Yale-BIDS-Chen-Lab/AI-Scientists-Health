@@ -1,0 +1,12 @@
+{
+  "threshold": 0.38811336448615297,
+  "target_alert_rate": 0.1,
+  "note": "Applies to probabilities AFTER per-icu_type recalibration (see recalibration_cycle4.json). No per-unit thresholds used -- see report_cycle4.md for why a single global threshold on corrected probabilities was chosen over equalizing alert rates across units.",
+  "design_trainval_alert_rate": 0.1,
+  "design_trainval_alert_rate_by_icu_type": {
+    "coronary_care": 0.09081196581196581,
+    "surgical": 0.13089295618413754,
+    "cardiac_surgery_recovery": 0.012878787878787878,
+    "medical": 0.12900469884664673
+  }
+}
